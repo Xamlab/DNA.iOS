@@ -8,13 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		15D425763A63EA5B054F66CA /* Pods_DNA_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5844C988C44009AA74EA525 /* Pods_DNA_iOS.framework */; };
+		7209B78AC60C7ACECB3B6B4B /* Pods_DNA_iOS_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451CD8B55C7042F65EF5752D /* Pods_DNA_iOS_CoreTests.framework */; };
+		934064FD4D25E111931C542C /* Pods_DNA_iOS_ViewModelsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25836E7AD2688910A371301 /* Pods_DNA_iOS_ViewModelsTests.framework */; };
+		ACA6A40870AA0AD88C4556BF /* Pods_DNA_iOS_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6FB7B6A4BC3FB91214DEE6 /* Pods_DNA_iOS_Core.framework */; };
 		BA056B5522E25DE700364519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056B5422E25DE700364519 /* AppDelegate.swift */; };
 		BA056B5722E25DE700364519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056B5622E25DE700364519 /* ViewController.swift */; };
 		BA056B5A22E25DE700364519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA056B5822E25DE700364519 /* Main.storyboard */; };
 		BA056B5C22E25DE800364519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA056B5B22E25DE800364519 /* Assets.xcassets */; };
 		BA056B5F22E25DE800364519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA056B5D22E25DE800364519 /* LaunchScreen.storyboard */; };
 		BA056B6A22E25DE800364519 /* DNA_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056B6922E25DE800364519 /* DNA_iOSTests.swift */; };
+		BA056B8222E2624B00364519 /* DNA_iOS_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */; };
+		BA056B8922E2624B00364519 /* DNA_iOS_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056B8822E2624B00364519 /* DNA_iOS_CoreTests.swift */; };
+		BA056B8B22E2624B00364519 /* DNA_iOS_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = BA056B7B22E2624B00364519 /* DNA_iOS_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA056B8E22E2624B00364519 /* DNA_iOS_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */; };
+		BA056B8F22E2624B00364519 /* DNA_iOS_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA056BA522E2626200364519 /* DNA_iOS_ViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */; };
+		BA056BAC22E2626200364519 /* DNA_iOS_ViewModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056BAB22E2626200364519 /* DNA_iOS_ViewModelsTests.swift */; };
+		BA056BAE22E2626200364519 /* DNA_iOS_ViewModels.h in Headers */ = {isa = PBXBuildFile; fileRef = BA056B9E22E2626200364519 /* DNA_iOS_ViewModels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA056BB122E2626200364519 /* DNA_iOS_ViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */; };
+		BA056BB222E2626200364519 /* DNA_iOS_ViewModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF403BCD577FA1A3918CB68C /* Pods_DNA_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AD629F3996D47FC93B4D50 /* Pods_DNA_iOSTests.framework */; };
+		CFA40E5C7767CF46F354BFFA /* Pods_DNA_iOS_ViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5882EB8BDE1CD6BD8C0E5563 /* Pods_DNA_iOS_ViewModels.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,11 +39,64 @@
 			remoteGlobalIDString = BA056B5022E25DE600364519;
 			remoteInfo = DNA.iOS;
 		};
+		BA056B8322E2624B00364519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA056B4922E25DE600364519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA056B7822E2624B00364519;
+			remoteInfo = DNA.iOS.Core;
+		};
+		BA056B8C22E2624B00364519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA056B4922E25DE600364519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA056B7822E2624B00364519;
+			remoteInfo = DNA.iOS.Core;
+		};
+		BA056BA622E2626200364519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA056B4922E25DE600364519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA056B9B22E2626200364519;
+			remoteInfo = DNA.iOS.ViewModels;
+		};
+		BA056BAF22E2626200364519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA056B4922E25DE600364519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA056B9B22E2626200364519;
+			remoteInfo = DNA.iOS.ViewModels;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BA056B9322E2624B00364519 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BA056B8F22E2624B00364519 /* DNA_iOS_Core.framework in Embed Frameworks */,
+				BA056BB222E2626200364519 /* DNA_iOS_ViewModels.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		23D847C7A92D8646CDB9D9F1 /* Pods-DNA.iOS.CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.CoreTests.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.CoreTests/Pods-DNA.iOS.CoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		39FACEC9621848E2DA0B90AB /* Pods-DNA.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOS/Pods-DNA.iOS.release.xcconfig"; sourceTree = "<group>"; };
+		451CD8B55C7042F65EF5752D /* Pods_DNA_iOS_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AD629F3996D47FC93B4D50 /* Pods_DNA_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5882EB8BDE1CD6BD8C0E5563 /* Pods_DNA_iOS_ViewModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS_ViewModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58CD32697628A004070D58B7 /* Pods-DNA.iOS.ViewModelsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.ViewModelsTests.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.ViewModelsTests/Pods-DNA.iOS.ViewModelsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		58D473566254C69E416A59EB /* Pods-DNA.iOS.ViewModelsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.ViewModelsTests.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.ViewModelsTests/Pods-DNA.iOS.ViewModelsTests.release.xcconfig"; sourceTree = "<group>"; };
+		62613A878771F7BD7E26A302 /* Pods-DNA.iOS.CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.CoreTests.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.CoreTests/Pods-DNA.iOS.CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		994C6FC992B67EEC8DCFD211 /* Pods-DNA.iOS.ViewModels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.ViewModels.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.ViewModels/Pods-DNA.iOS.ViewModels.release.xcconfig"; sourceTree = "<group>"; };
+		9B5D4804DBF570155F361E52 /* Pods-DNA.iOS.Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.Core.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.Core/Pods-DNA.iOS.Core.debug.xcconfig"; sourceTree = "<group>"; };
+		9B6FB7B6A4BC3FB91214DEE6 /* Pods_DNA_iOS_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A73EFC57FFAA0CCA4BBE1DC3 /* Pods-DNA.iOS.Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.Core.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.Core/Pods-DNA.iOS.Core.release.xcconfig"; sourceTree = "<group>"; };
 		BA056B5122E25DE600364519 /* DNA.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNA.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA056B5422E25DE700364519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA056B5622E25DE700364519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,8 +107,22 @@
 		BA056B6522E25DE800364519 /* DNA.iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNA.iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA056B6922E25DE800364519 /* DNA_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNA_iOSTests.swift; sourceTree = "<group>"; };
 		BA056B6B22E25DE800364519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DNA_iOS_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA056B7B22E2624B00364519 /* DNA_iOS_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNA_iOS_Core.h; sourceTree = "<group>"; };
+		BA056B7C22E2624B00364519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA056B8122E2624B00364519 /* DNA.iOS.CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNA.iOS.CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA056B8822E2624B00364519 /* DNA_iOS_CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNA_iOS_CoreTests.swift; sourceTree = "<group>"; };
+		BA056B8A22E2624B00364519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DNA_iOS_ViewModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA056B9E22E2626200364519 /* DNA_iOS_ViewModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNA_iOS_ViewModels.h; sourceTree = "<group>"; };
+		BA056B9F22E2626200364519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA056BA422E2626200364519 /* DNA.iOS.ViewModelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNA.iOS.ViewModelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA056BAB22E2626200364519 /* DNA_iOS_ViewModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNA_iOS_ViewModelsTests.swift; sourceTree = "<group>"; };
+		BA056BAD22E2626200364519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE08A6F8BACCA9986840A9CD /* Pods-DNA.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS/Pods-DNA.iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D5844C988C44009AA74EA525 /* Pods_DNA_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25836E7AD2688910A371301 /* Pods_DNA_iOS_ViewModelsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS_ViewModelsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F625D3AFA56A766F6FFE54E7 /* Pods-DNA.iOS.ViewModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.ViewModels.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.ViewModels/Pods-DNA.iOS.ViewModels.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B657B301C3E305007F5BCF /* Pods-DNA.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA9CCB91EBE0117DE728585A /* Pods-DNA.iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,7 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA056BB122E2626200364519 /* DNA_iOS_ViewModels.framework in Frameworks */,
 				15D425763A63EA5B054F66CA /* Pods_DNA_iOS.framework in Frameworks */,
+				BA056B8E22E2624B00364519 /* DNA_iOS_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +143,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF403BCD577FA1A3918CB68C /* Pods_DNA_iOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B7622E2624B00364519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA6A40870AA0AD88C4556BF /* Pods_DNA_iOS_Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B7E22E2624B00364519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA056B8222E2624B00364519 /* DNA_iOS_Core.framework in Frameworks */,
+				7209B78AC60C7ACECB3B6B4B /* Pods_DNA_iOS_CoreTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B9922E2626200364519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA40E5C7767CF46F354BFFA /* Pods_DNA_iOS_ViewModels.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056BA122E2626200364519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA056BA522E2626200364519 /* DNA_iOS_ViewModels.framework in Frameworks */,
+				934064FD4D25E111931C542C /* Pods_DNA_iOS_ViewModelsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +190,14 @@
 				39FACEC9621848E2DA0B90AB /* Pods-DNA.iOS.release.xcconfig */,
 				F9B657B301C3E305007F5BCF /* Pods-DNA.iOSTests.debug.xcconfig */,
 				FA9CCB91EBE0117DE728585A /* Pods-DNA.iOSTests.release.xcconfig */,
+				9B5D4804DBF570155F361E52 /* Pods-DNA.iOS.Core.debug.xcconfig */,
+				A73EFC57FFAA0CCA4BBE1DC3 /* Pods-DNA.iOS.Core.release.xcconfig */,
+				62613A878771F7BD7E26A302 /* Pods-DNA.iOS.CoreTests.debug.xcconfig */,
+				23D847C7A92D8646CDB9D9F1 /* Pods-DNA.iOS.CoreTests.release.xcconfig */,
+				F625D3AFA56A766F6FFE54E7 /* Pods-DNA.iOS.ViewModels.debug.xcconfig */,
+				994C6FC992B67EEC8DCFD211 /* Pods-DNA.iOS.ViewModels.release.xcconfig */,
+				58CD32697628A004070D58B7 /* Pods-DNA.iOS.ViewModelsTests.debug.xcconfig */,
+				58D473566254C69E416A59EB /* Pods-DNA.iOS.ViewModelsTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -82,6 +207,10 @@
 			children = (
 				D5844C988C44009AA74EA525 /* Pods_DNA_iOS.framework */,
 				49AD629F3996D47FC93B4D50 /* Pods_DNA_iOSTests.framework */,
+				9B6FB7B6A4BC3FB91214DEE6 /* Pods_DNA_iOS_Core.framework */,
+				451CD8B55C7042F65EF5752D /* Pods_DNA_iOS_CoreTests.framework */,
+				5882EB8BDE1CD6BD8C0E5563 /* Pods_DNA_iOS_ViewModels.framework */,
+				E25836E7AD2688910A371301 /* Pods_DNA_iOS_ViewModelsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,6 +220,10 @@
 			children = (
 				BA056B5322E25DE700364519 /* DNA.iOS */,
 				BA056B6822E25DE800364519 /* DNA.iOSTests */,
+				BA056B7A22E2624B00364519 /* DNA.iOS.Core */,
+				BA056B8722E2624B00364519 /* DNA.iOS.CoreTests */,
+				BA056B9D22E2626200364519 /* DNA.iOS.ViewModels */,
+				BA056BAA22E2626200364519 /* DNA.iOS.ViewModelsTests */,
 				BA056B5222E25DE600364519 /* Products */,
 				0F99034613A1ACC464806AF6 /* Pods */,
 				55723360DD96D87C9A6328D5 /* Frameworks */,
@@ -102,6 +235,10 @@
 			children = (
 				BA056B5122E25DE600364519 /* DNA.iOS.app */,
 				BA056B6522E25DE800364519 /* DNA.iOSTests.xctest */,
+				BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */,
+				BA056B8122E2624B00364519 /* DNA.iOS.CoreTests.xctest */,
+				BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */,
+				BA056BA422E2626200364519 /* DNA.iOS.ViewModelsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +265,62 @@
 			path = DNA.iOSTests;
 			sourceTree = "<group>";
 		};
+		BA056B7A22E2624B00364519 /* DNA.iOS.Core */ = {
+			isa = PBXGroup;
+			children = (
+				BA056B7B22E2624B00364519 /* DNA_iOS_Core.h */,
+				BA056B7C22E2624B00364519 /* Info.plist */,
+			);
+			path = DNA.iOS.Core;
+			sourceTree = "<group>";
+		};
+		BA056B8722E2624B00364519 /* DNA.iOS.CoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA056B8822E2624B00364519 /* DNA_iOS_CoreTests.swift */,
+				BA056B8A22E2624B00364519 /* Info.plist */,
+			);
+			path = DNA.iOS.CoreTests;
+			sourceTree = "<group>";
+		};
+		BA056B9D22E2626200364519 /* DNA.iOS.ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BA056B9E22E2626200364519 /* DNA_iOS_ViewModels.h */,
+				BA056B9F22E2626200364519 /* Info.plist */,
+			);
+			path = DNA.iOS.ViewModels;
+			sourceTree = "<group>";
+		};
+		BA056BAA22E2626200364519 /* DNA.iOS.ViewModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA056BAB22E2626200364519 /* DNA_iOS_ViewModelsTests.swift */,
+				BA056BAD22E2626200364519 /* Info.plist */,
+			);
+			path = DNA.iOS.ViewModelsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BA056B7422E2624B00364519 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA056B8B22E2624B00364519 /* DNA_iOS_Core.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B9722E2626200364519 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA056BAE22E2626200364519 /* DNA_iOS_ViewModels.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		BA056B5022E25DE600364519 /* DNA.iOS */ = {
@@ -140,10 +332,13 @@
 				BA056B4E22E25DE600364519 /* Frameworks */,
 				BA056B4F22E25DE600364519 /* Resources */,
 				1920FEFB1C2F364D33EECD98 /* [CP] Embed Pods Frameworks */,
+				BA056B9322E2624B00364519 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BA056B8D22E2624B00364519 /* PBXTargetDependency */,
+				BA056BB022E2626200364519 /* PBXTargetDependency */,
 			);
 			name = DNA.iOS;
 			productName = DNA.iOS;
@@ -170,6 +365,84 @@
 			productReference = BA056B6522E25DE800364519 /* DNA.iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BA056B7822E2624B00364519 /* DNA.iOS.Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA056B9022E2624B00364519 /* Build configuration list for PBXNativeTarget "DNA.iOS.Core" */;
+			buildPhases = (
+				69C32F6025F967C2E5286D3A /* [CP] Check Pods Manifest.lock */,
+				BA056B7422E2624B00364519 /* Headers */,
+				BA056B7522E2624B00364519 /* Sources */,
+				BA056B7622E2624B00364519 /* Frameworks */,
+				BA056B7722E2624B00364519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNA.iOS.Core;
+			productName = DNA.iOS.Core;
+			productReference = BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA056B8022E2624B00364519 /* DNA.iOS.CoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA056B9422E2624B00364519 /* Build configuration list for PBXNativeTarget "DNA.iOS.CoreTests" */;
+			buildPhases = (
+				ECDF070AF7A5B98206784FD7 /* [CP] Check Pods Manifest.lock */,
+				BA056B7D22E2624B00364519 /* Sources */,
+				BA056B7E22E2624B00364519 /* Frameworks */,
+				BA056B7F22E2624B00364519 /* Resources */,
+				C0A9F37E8D57C8BA4ABC7A06 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA056B8422E2624B00364519 /* PBXTargetDependency */,
+			);
+			name = DNA.iOS.CoreTests;
+			productName = DNA.iOS.CoreTests;
+			productReference = BA056B8122E2624B00364519 /* DNA.iOS.CoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA056B9B22E2626200364519 /* DNA.iOS.ViewModels */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA056BB322E2626200364519 /* Build configuration list for PBXNativeTarget "DNA.iOS.ViewModels" */;
+			buildPhases = (
+				E62AD1789638BF01E024E0C1 /* [CP] Check Pods Manifest.lock */,
+				BA056B9722E2626200364519 /* Headers */,
+				BA056B9822E2626200364519 /* Sources */,
+				BA056B9922E2626200364519 /* Frameworks */,
+				BA056B9A22E2626200364519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNA.iOS.ViewModels;
+			productName = DNA.iOS.ViewModels;
+			productReference = BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA056BA322E2626200364519 /* DNA.iOS.ViewModelsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA056BB622E2626200364519 /* Build configuration list for PBXNativeTarget "DNA.iOS.ViewModelsTests" */;
+			buildPhases = (
+				DE3FF1444DFF3D3D9C257970 /* [CP] Check Pods Manifest.lock */,
+				BA056BA022E2626200364519 /* Sources */,
+				BA056BA122E2626200364519 /* Frameworks */,
+				BA056BA222E2626200364519 /* Resources */,
+				C0AD6E37729075282C45A4F1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA056BA722E2626200364519 /* PBXTargetDependency */,
+			);
+			name = DNA.iOS.ViewModelsTests;
+			productName = DNA.iOS.ViewModelsTests;
+			productReference = BA056BA422E2626200364519 /* DNA.iOS.ViewModelsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +457,20 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					BA056B6422E25DE800364519 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BA056B5022E25DE600364519;
+					};
+					BA056B7822E2624B00364519 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					BA056B8022E2624B00364519 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BA056B5022E25DE600364519;
+					};
+					BA056B9B22E2626200364519 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					BA056BA322E2626200364519 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = BA056B5022E25DE600364519;
 					};
@@ -204,6 +491,10 @@
 			targets = (
 				BA056B5022E25DE600364519 /* DNA.iOS */,
 				BA056B6422E25DE800364519 /* DNA.iOSTests */,
+				BA056B7822E2624B00364519 /* DNA.iOS.Core */,
+				BA056B8022E2624B00364519 /* DNA.iOS.CoreTests */,
+				BA056B9B22E2626200364519 /* DNA.iOS.ViewModels */,
+				BA056BA322E2626200364519 /* DNA.iOS.ViewModelsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +511,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BA056B6322E25DE800364519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B7722E2624B00364519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B7F22E2624B00364519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B9A22E2626200364519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056BA222E2626200364519 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,6 +654,152 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		69C32F6025F967C2E5286D3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DNA.iOS.Core-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0A9F37E8D57C8BA4ABC7A06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DNA.iOS.CoreTests/Pods-DNA.iOS.CoreTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DNA.iOS.CoreTests/Pods-DNA.iOS.CoreTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0AD6E37729075282C45A4F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DNA.iOS.ViewModelsTests/Pods-DNA.iOS.ViewModelsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DNA.iOS.ViewModelsTests/Pods-DNA.iOS.ViewModelsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE3FF1444DFF3D3D9C257970 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DNA.iOS.ViewModelsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E62AD1789638BF01E024E0C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DNA.iOS.ViewModels-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECDF070AF7A5B98206784FD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DNA.iOS.CoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -355,6 +820,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA056B7522E2624B00364519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B7D22E2624B00364519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA056B8922E2624B00364519 /* DNA_iOS_CoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056B9822E2626200364519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA056BA022E2626200364519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA056BAC22E2626200364519 /* DNA_iOS_ViewModelsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -362,6 +857,26 @@
 			isa = PBXTargetDependency;
 			target = BA056B5022E25DE600364519 /* DNA.iOS */;
 			targetProxy = BA056B6622E25DE800364519 /* PBXContainerItemProxy */;
+		};
+		BA056B8422E2624B00364519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA056B7822E2624B00364519 /* DNA.iOS.Core */;
+			targetProxy = BA056B8322E2624B00364519 /* PBXContainerItemProxy */;
+		};
+		BA056B8D22E2624B00364519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA056B7822E2624B00364519 /* DNA.iOS.Core */;
+			targetProxy = BA056B8C22E2624B00364519 /* PBXContainerItemProxy */;
+		};
+		BA056BA722E2626200364519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA056B9B22E2626200364519 /* DNA.iOS.ViewModels */;
+			targetProxy = BA056BA622E2626200364519 /* PBXContainerItemProxy */;
+		};
+		BA056BB022E2626200364519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA056B9B22E2626200364519 /* DNA.iOS.ViewModels */;
+			targetProxy = BA056BAF22E2626200364519 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -583,6 +1098,206 @@
 			};
 			name = Release;
 		};
+		BA056B9122E2624B00364519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B5D4804DBF570155F361E52 /* Pods-DNA.iOS.Core.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JYCV8J522;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DNA.iOS.Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-Core";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BA056B9222E2624B00364519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A73EFC57FFAA0CCA4BBE1DC3 /* Pods-DNA.iOS.Core.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JYCV8J522;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DNA.iOS.Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-Core";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA056B9522E2624B00364519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62613A878771F7BD7E26A302 /* Pods-DNA.iOS.CoreTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JYCV8J522;
+				INFOPLIST_FILE = DNA.iOS.CoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-CoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNA.iOS.app/DNA.iOS";
+			};
+			name = Debug;
+		};
+		BA056B9622E2624B00364519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23D847C7A92D8646CDB9D9F1 /* Pods-DNA.iOS.CoreTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JYCV8J522;
+				INFOPLIST_FILE = DNA.iOS.CoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-CoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNA.iOS.app/DNA.iOS";
+			};
+			name = Release;
+		};
+		BA056BB422E2626200364519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F625D3AFA56A766F6FFE54E7 /* Pods-DNA.iOS.ViewModels.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JYCV8J522;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DNA.iOS.ViewModels/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-ViewModels";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BA056BB522E2626200364519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 994C6FC992B67EEC8DCFD211 /* Pods-DNA.iOS.ViewModels.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JYCV8J522;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DNA.iOS.ViewModels/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-ViewModels";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA056BB722E2626200364519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58CD32697628A004070D58B7 /* Pods-DNA.iOS.ViewModelsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JYCV8J522;
+				INFOPLIST_FILE = DNA.iOS.ViewModelsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-ViewModelsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNA.iOS.app/DNA.iOS";
+			};
+			name = Debug;
+		};
+		BA056BB822E2626200364519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58D473566254C69E416A59EB /* Pods-DNA.iOS.ViewModelsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JYCV8J522;
+				INFOPLIST_FILE = DNA.iOS.ViewModelsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-ViewModelsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNA.iOS.app/DNA.iOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -609,6 +1324,42 @@
 			buildConfigurations = (
 				BA056B7222E25DE800364519 /* Debug */,
 				BA056B7322E25DE800364519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA056B9022E2624B00364519 /* Build configuration list for PBXNativeTarget "DNA.iOS.Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA056B9122E2624B00364519 /* Debug */,
+				BA056B9222E2624B00364519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA056B9422E2624B00364519 /* Build configuration list for PBXNativeTarget "DNA.iOS.CoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA056B9522E2624B00364519 /* Debug */,
+				BA056B9622E2624B00364519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA056BB322E2626200364519 /* Build configuration list for PBXNativeTarget "DNA.iOS.ViewModels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA056BB422E2626200364519 /* Debug */,
+				BA056BB522E2626200364519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA056BB622E2626200364519 /* Build configuration list for PBXNativeTarget "DNA.iOS.ViewModelsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA056BB722E2626200364519 /* Debug */,
+				BA056BB822E2626200364519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

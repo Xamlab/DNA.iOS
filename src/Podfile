@@ -38,3 +38,29 @@ target 'DNA.iOS' do
   end
 
 end
+
+target 'DNA.iOS.Core' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  common
+
+  target 'DNA.iOS.CoreTests' do
+    inherit! :search_paths
+    test
+  end
+end
+
+target 'DNA.iOS.ViewModels' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  bond
+  common
+
+  target 'DNA.iOS.ViewModelsTests' do
+    inherit! :search_paths
+    # Please do not remove bond. Even though the bond is present in the parent dependency, as soon as we remove it from here tests stop working
+    bond
+    test
+  end
+end
