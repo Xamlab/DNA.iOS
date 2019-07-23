@@ -49,6 +49,7 @@
 		EE169A9822E7445100554F0F /* IConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9722E7445100554F0F /* IConfigurationProvider.swift */; };
 		EE169A9B22E7446800554F0F /* ConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9A22E7446800554F0F /* ConfigurationProvider.swift */; };
 		EE169A9E22E7477400554F0F /* CoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9D22E7477400554F0F /* CoreError.swift */; };
+		EE169AA122E758AF00554F0F /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169AA022E758AF00554F0F /* UIColor+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		EE169A9722E7445100554F0F /* IConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IConfigurationProvider.swift; sourceTree = "<group>"; };
 		EE169A9A22E7446800554F0F /* ConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationProvider.swift; sourceTree = "<group>"; };
 		EE169A9D22E7477400554F0F /* CoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreError.swift; sourceTree = "<group>"; };
+		EE169AA022E758AF00554F0F /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		F625D3AFA56A766F6FFE54E7 /* Pods-DNA.iOS.ViewModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.ViewModels.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.ViewModels/Pods-DNA.iOS.ViewModels.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B657B301C3E305007F5BCF /* Pods-DNA.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA9CCB91EBE0117DE728585A /* Pods-DNA.iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				BA056B5422E25DE700364519 /* AppDelegate.swift */,
+				EE169A9F22E7588A00554F0F /* Extensions */,
 				BA056B5622E25DE700364519 /* ViewController.swift */,
 				BA056B5822E25DE700364519 /* Main.storyboard */,
 				BA056B5B22E25DE800364519 /* Assets.xcassets */,
@@ -447,6 +450,14 @@
 				EE169A9D22E7477400554F0F /* CoreError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		EE169A9F22E7588A00554F0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EE169AA022E758AF00554F0F /* UIColor+App.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -956,6 +967,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA056B5722E25DE700364519 /* ViewController.swift in Sources */,
+				EE169AA122E758AF00554F0F /* UIColor+App.swift in Sources */,
 				BA056B5522E25DE700364519 /* AppDelegate.swift in Sources */,
 				EE169A9522E740A200554F0F /* main.swift in Sources */,
 			);
