@@ -288,14 +288,10 @@
 		BA056B5322E25DE700364519 /* DNA.iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BA056B5422E25DE700364519 /* AppDelegate.swift */,
 				EE169A9F22E7588A00554F0F /* Extensions */,
-				BA056B5622E25DE700364519 /* ViewController.swift */,
-				BA056B5822E25DE700364519 /* Main.storyboard */,
-				BA056B5B22E25DE800364519 /* Assets.xcassets */,
-				BA056B5D22E25DE800364519 /* LaunchScreen.storyboard */,
-				BA056B6022E25DE800364519 /* Info.plist */,
-				EE169A9422E740A200554F0F /* main.swift */,
+				EE169AA322E75B5200554F0F /* ViewControllers */,
+				EE169AA222E75B3C00554F0F /* Storyboars */,
+				EE169AA422E75B6000554F0F /* Resources */,
 			);
 			path = DNA.iOS;
 			sourceTree = "<group>";
@@ -458,6 +454,34 @@
 				EE169AA022E758AF00554F0F /* UIColor+App.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EE169AA222E75B3C00554F0F /* Storyboars */ = {
+			isa = PBXGroup;
+			children = (
+				BA056B5822E25DE700364519 /* Main.storyboard */,
+				BA056B5D22E25DE800364519 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboars;
+			sourceTree = "<group>";
+		};
+		EE169AA322E75B5200554F0F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA056B5622E25DE700364519 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EE169AA422E75B6000554F0F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA056B5422E25DE700364519 /* AppDelegate.swift */,
+				BA056B5B22E25DE800364519 /* Assets.xcassets */,
+				BA056B6022E25DE800364519 /* Info.plist */,
+				EE169A9422E740A200554F0F /* main.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1205,7 +1229,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JYCV8J522;
-				INFOPLIST_FILE = DNA.iOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DNA.iOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1225,7 +1249,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JYCV8J522;
-				INFOPLIST_FILE = DNA.iOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DNA.iOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
