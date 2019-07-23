@@ -19,7 +19,6 @@
 		BA056B6A22E25DE800364519 /* DNA_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056B6922E25DE800364519 /* DNA_iOSTests.swift */; };
 		BA056B8222E2624B00364519 /* DNA_iOS_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */; };
 		BA056B8922E2624B00364519 /* DNA_iOS_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA056B8822E2624B00364519 /* DNA_iOS_CoreTests.swift */; };
-		BA056B8B22E2624B00364519 /* DNA_iOS_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = BA056B7B22E2624B00364519 /* DNA_iOS_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA056B8E22E2624B00364519 /* DNA_iOS_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */; };
 		BA056B8F22E2624B00364519 /* DNA_iOS_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA056BA522E2626200364519 /* DNA_iOS_ViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */; };
@@ -29,6 +28,27 @@
 		BA056BB222E2626200364519 /* DNA_iOS_ViewModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF403BCD577FA1A3918CB68C /* Pods_DNA_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AD629F3996D47FC93B4D50 /* Pods_DNA_iOSTests.framework */; };
 		CFA40E5C7767CF46F354BFFA /* Pods_DNA_iOS_ViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5882EB8BDE1CD6BD8C0E5563 /* Pods_DNA_iOS_ViewModels.framework */; };
+		EE169A6C22E739DD00554F0F /* IApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A6B22E739DD00554F0F /* IApiService.swift */; };
+		EE169A6F22E73B0300554F0F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A6E22E73B0300554F0F /* ApiService.swift */; };
+		EE169A7222E73BA000554F0F /* WeatherOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A7122E73BA000554F0F /* WeatherOverview.swift */; };
+		EE169A7422E73BBF00554F0F /* WeatherCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A7322E73BBF00554F0F /* WeatherCity.swift */; };
+		EE169A7622E73BED00554F0F /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A7522E73BED00554F0F /* Coord.swift */; };
+		EE169A7822E73C1900554F0F /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A7722E73C1900554F0F /* List.swift */; };
+		EE169A7A22E73C4700554F0F /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A7922E73C4700554F0F /* Clouds.swift */; };
+		EE169A7C22E73C5A00554F0F /* MainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A7B22E73C5A00554F0F /* MainClass.swift */; };
+		EE169A7E22E73C9100554F0F /* Snow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A7D22E73C9100554F0F /* Snow.swift */; };
+		EE169A8022E73CA900554F0F /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A7F22E73CA900554F0F /* Sys.swift */; };
+		EE169A8222E73CB800554F0F /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A8122E73CB800554F0F /* Pod.swift */; };
+		EE169A8422E73CEA00554F0F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A8322E73CEA00554F0F /* Weather.swift */; };
+		EE169A8622E73D0400554F0F /* MainEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A8522E73D0400554F0F /* MainEnum.swift */; };
+		EE169A8822E73D1E00554F0F /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A8722E73D1E00554F0F /* Description.swift */; };
+		EE169A8B22E73D7600554F0F /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A8A22E73D7600554F0F /* Wind.swift */; };
+		EE169A9122E73F4500554F0F /* Startup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9022E73F4500554F0F /* Startup.swift */; };
+		EE169A9322E7401200554F0F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9222E7401200554F0F /* ServiceLocator.swift */; };
+		EE169A9522E740A200554F0F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9422E740A200554F0F /* main.swift */; };
+		EE169A9822E7445100554F0F /* IConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9722E7445100554F0F /* IConfigurationProvider.swift */; };
+		EE169A9B22E7446800554F0F /* ConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9A22E7446800554F0F /* ConfigurationProvider.swift */; };
+		EE169A9E22E7477400554F0F /* CoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9D22E7477400554F0F /* CoreError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +128,6 @@
 		BA056B6922E25DE800364519 /* DNA_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNA_iOSTests.swift; sourceTree = "<group>"; };
 		BA056B6B22E25DE800364519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA056B7922E2624B00364519 /* DNA_iOS_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DNA_iOS_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA056B7B22E2624B00364519 /* DNA_iOS_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNA_iOS_Core.h; sourceTree = "<group>"; };
 		BA056B7C22E2624B00364519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA056B8122E2624B00364519 /* DNA.iOS.CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNA.iOS.CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA056B8822E2624B00364519 /* DNA_iOS_CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNA_iOS_CoreTests.swift; sourceTree = "<group>"; };
@@ -122,6 +141,27 @@
 		CE08A6F8BACCA9986840A9CD /* Pods-DNA.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS/Pods-DNA.iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D5844C988C44009AA74EA525 /* Pods_DNA_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25836E7AD2688910A371301 /* Pods_DNA_iOS_ViewModelsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS_ViewModelsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE169A6B22E739DD00554F0F /* IApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IApiService.swift; sourceTree = "<group>"; };
+		EE169A6E22E73B0300554F0F /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		EE169A7122E73BA000554F0F /* WeatherOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOverview.swift; sourceTree = "<group>"; };
+		EE169A7322E73BBF00554F0F /* WeatherCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCity.swift; sourceTree = "<group>"; };
+		EE169A7522E73BED00554F0F /* Coord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		EE169A7722E73C1900554F0F /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		EE169A7922E73C4700554F0F /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
+		EE169A7B22E73C5A00554F0F /* MainClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainClass.swift; sourceTree = "<group>"; };
+		EE169A7D22E73C9100554F0F /* Snow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snow.swift; sourceTree = "<group>"; };
+		EE169A7F22E73CA900554F0F /* Sys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
+		EE169A8122E73CB800554F0F /* Pod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pod.swift; sourceTree = "<group>"; };
+		EE169A8322E73CEA00554F0F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		EE169A8522E73D0400554F0F /* MainEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEnum.swift; sourceTree = "<group>"; };
+		EE169A8722E73D1E00554F0F /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
+		EE169A8A22E73D7600554F0F /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		EE169A9022E73F4500554F0F /* Startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startup.swift; sourceTree = "<group>"; };
+		EE169A9222E7401200554F0F /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		EE169A9422E740A200554F0F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EE169A9722E7445100554F0F /* IConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IConfigurationProvider.swift; sourceTree = "<group>"; };
+		EE169A9A22E7446800554F0F /* ConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationProvider.swift; sourceTree = "<group>"; };
+		EE169A9D22E7477400554F0F /* CoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreError.swift; sourceTree = "<group>"; };
 		F625D3AFA56A766F6FFE54E7 /* Pods-DNA.iOS.ViewModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.ViewModels.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.ViewModels/Pods-DNA.iOS.ViewModels.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B657B301C3E305007F5BCF /* Pods-DNA.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA9CCB91EBE0117DE728585A /* Pods-DNA.iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,10 +259,10 @@
 			isa = PBXGroup;
 			children = (
 				BA056B5322E25DE700364519 /* DNA.iOS */,
-				BA056B6822E25DE800364519 /* DNA.iOSTests */,
 				BA056B7A22E2624B00364519 /* DNA.iOS.Core */,
-				BA056B8722E2624B00364519 /* DNA.iOS.CoreTests */,
 				BA056B9D22E2626200364519 /* DNA.iOS.ViewModels */,
+				BA056B6822E25DE800364519 /* DNA.iOSTests */,
+				BA056B8722E2624B00364519 /* DNA.iOS.CoreTests */,
 				BA056BAA22E2626200364519 /* DNA.iOS.ViewModelsTests */,
 				BA056B5222E25DE600364519 /* Products */,
 				0F99034613A1ACC464806AF6 /* Pods */,
@@ -252,6 +292,7 @@
 				BA056B5B22E25DE800364519 /* Assets.xcassets */,
 				BA056B5D22E25DE800364519 /* LaunchScreen.storyboard */,
 				BA056B6022E25DE800364519 /* Info.plist */,
+				EE169A9422E740A200554F0F /* main.swift */,
 			);
 			path = DNA.iOS;
 			sourceTree = "<group>";
@@ -268,8 +309,13 @@
 		BA056B7A22E2624B00364519 /* DNA.iOS.Core */ = {
 			isa = PBXGroup;
 			children = (
-				BA056B7B22E2624B00364519 /* DNA_iOS_Core.h */,
+				EE169A9C22E7476500554F0F /* Errors */,
+				EE169A7022E73B2400554F0F /* Models */,
+				EE169A9622E7444200554F0F /* Providers */,
+				EE169A6A22E739C100554F0F /* Services */,
 				BA056B7C22E2624B00364519 /* Info.plist */,
+				EE169A9022E73F4500554F0F /* Startup.swift */,
+				EE169A9222E7401200554F0F /* ServiceLocator.swift */,
 			);
 			path = DNA.iOS.Core;
 			sourceTree = "<group>";
@@ -301,6 +347,108 @@
 			path = DNA.iOS.ViewModelsTests;
 			sourceTree = "<group>";
 		};
+		EE169A6A22E739C100554F0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A6D22E739E100554F0F /* Implementation */,
+				EE169A6B22E739DD00554F0F /* IApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EE169A6D22E739E100554F0F /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A6E22E73B0300554F0F /* ApiService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		EE169A7022E73B2400554F0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A8E22E73E0D00554F0F /* WeatherOverView */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE169A8922E73D3200554F0F /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A8322E73CEA00554F0F /* Weather.swift */,
+				EE169A8522E73D0400554F0F /* MainEnum.swift */,
+				EE169A8722E73D1E00554F0F /* Description.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		EE169A8C22E73DA300554F0F /* Sys */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A7F22E73CA900554F0F /* Sys.swift */,
+				EE169A8122E73CB800554F0F /* Pod.swift */,
+			);
+			path = Sys;
+			sourceTree = "<group>";
+		};
+		EE169A8D22E73DC000554F0F /* List */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A7722E73C1900554F0F /* List.swift */,
+				EE169A7B22E73C5A00554F0F /* MainClass.swift */,
+				EE169A8922E73D3200554F0F /* Weather */,
+				EE169A7922E73C4700554F0F /* Clouds.swift */,
+				EE169A8A22E73D7600554F0F /* Wind.swift */,
+				EE169A7D22E73C9100554F0F /* Snow.swift */,
+				EE169A8C22E73DA300554F0F /* Sys */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		EE169A8E22E73E0D00554F0F /* WeatherOverView */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A7122E73BA000554F0F /* WeatherOverview.swift */,
+				EE169A8D22E73DC000554F0F /* List */,
+				EE169A8F22E73E3200554F0F /* WeatherCity */,
+			);
+			path = WeatherOverView;
+			sourceTree = "<group>";
+		};
+		EE169A8F22E73E3200554F0F /* WeatherCity */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A7322E73BBF00554F0F /* WeatherCity.swift */,
+				EE169A7522E73BED00554F0F /* Coord.swift */,
+			);
+			path = WeatherCity;
+			sourceTree = "<group>";
+		};
+		EE169A9622E7444200554F0F /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A9922E7445D00554F0F /* Implementation */,
+				EE169A9722E7445100554F0F /* IConfigurationProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		EE169A9922E7445D00554F0F /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A9A22E7446800554F0F /* ConfigurationProvider.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		EE169A9C22E7476500554F0F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				EE169A9D22E7477400554F0F /* CoreError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -308,7 +456,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA056B8B22E2624B00364519 /* DNA_iOS_Core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +609,7 @@
 					};
 					BA056B7822E2624B00364519 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					BA056B8022E2624B00364519 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -809,6 +957,7 @@
 			files = (
 				BA056B5722E25DE700364519 /* ViewController.swift in Sources */,
 				BA056B5522E25DE700364519 /* AppDelegate.swift in Sources */,
+				EE169A9522E740A200554F0F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +973,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE169A6F22E73B0300554F0F /* ApiService.swift in Sources */,
+				EE169A9B22E7446800554F0F /* ConfigurationProvider.swift in Sources */,
+				EE169A7622E73BED00554F0F /* Coord.swift in Sources */,
+				EE169A7422E73BBF00554F0F /* WeatherCity.swift in Sources */,
+				EE169A7222E73BA000554F0F /* WeatherOverview.swift in Sources */,
+				EE169A8622E73D0400554F0F /* MainEnum.swift in Sources */,
+				EE169A8422E73CEA00554F0F /* Weather.swift in Sources */,
+				EE169A7E22E73C9100554F0F /* Snow.swift in Sources */,
+				EE169A8022E73CA900554F0F /* Sys.swift in Sources */,
+				EE169A8222E73CB800554F0F /* Pod.swift in Sources */,
+				EE169A7A22E73C4700554F0F /* Clouds.swift in Sources */,
+				EE169A8822E73D1E00554F0F /* Description.swift in Sources */,
+				EE169A9822E7445100554F0F /* IConfigurationProvider.swift in Sources */,
+				EE169A9122E73F4500554F0F /* Startup.swift in Sources */,
+				EE169A8B22E73D7600554F0F /* Wind.swift in Sources */,
+				EE169A7C22E73C5A00554F0F /* MainClass.swift in Sources */,
+				EE169A6C22E739DD00554F0F /* IApiService.swift in Sources */,
+				EE169A9E22E7477400554F0F /* CoreError.swift in Sources */,
+				EE169A9322E7401200554F0F /* ServiceLocator.swift in Sources */,
+				EE169A7822E73C1900554F0F /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,6 +1189,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE08A6F8BACCA9986840A9CD /* Pods-DNA.iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JYCV8J522;
@@ -1039,6 +1209,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39FACEC9621848E2DA0B90AB /* Pods-DNA.iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JYCV8J522;
@@ -1102,6 +1273,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B5D4804DBF570155F361E52 /* Pods-DNA.iOS.Core.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1120,6 +1292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xamlab.DNA-iOS-Core";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1131,6 +1304,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A73EFC57FFAA0CCA4BBE1DC3 /* Pods-DNA.iOS.Core.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

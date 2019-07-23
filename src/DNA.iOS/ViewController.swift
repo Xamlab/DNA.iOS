@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import DNA_iOS_Core
 
 class ViewController: UIViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.setup()
     }
 
-
+    private func setup() {
+        let apiService = ServiceLocator.instance.resolve(IApiService.self)!
+        
+        let moscowCityId = 5601538
+        apiService.fetchWeatherOverview(moscowCityId).then { (overview)  in
+            debugPrint(overview)
+            }.catch { (error) in
+                debugPrint(error)
+        }
+    }
 }
 
