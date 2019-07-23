@@ -9,8 +9,7 @@
 import Promises
 import Alamofire
 
-class ApiService: IApiService {
-    
+internal class ApiService: IApiService {
     private let configurationProvider: IConfigurationProvider
     
     private enum Endpoint {
