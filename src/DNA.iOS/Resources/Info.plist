@@ -4,6 +4,10 @@
 <dict>
 	<key>ApiBaseURL</key>
 	<string>https://samples.openweathermap.org/data</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>“Xam Weather will access your location only when you use the app to see weather.”</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>“Xam Weather will always access your location to see weather.”</string>
 	<key>ApiId</key>
 	<string>9e7f2aaea74d96e5be0233be8babd9da</string>
 	<key>CFBundleDevelopmentRegion</key>

@@ -50,6 +50,10 @@
 		EE169A9B22E7446800554F0F /* ConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9A22E7446800554F0F /* ConfigurationProvider.swift */; };
 		EE169A9E22E7477400554F0F /* CoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169A9D22E7477400554F0F /* CoreError.swift */; };
 		EE169AA122E758AF00554F0F /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE169AA022E758AF00554F0F /* UIColor+App.swift */; };
+		EE8D934522E8437500A320FC /* ILocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D934422E8437500A320FC /* ILocationManager.swift */; };
+		EE8D934822E8443100A320FC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D934722E8443100A320FC /* LocationManager.swift */; };
+		EE8D934B22E8483700A320FC /* CLLocation+City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D934A22E8483700A320FC /* CLLocation+City.swift */; };
+		EE8D934E22E8489D00A320FC /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D934D22E8489D00A320FC /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +168,10 @@
 		EE169A9A22E7446800554F0F /* ConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationProvider.swift; sourceTree = "<group>"; };
 		EE169A9D22E7477400554F0F /* CoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreError.swift; sourceTree = "<group>"; };
 		EE169AA022E758AF00554F0F /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
+		EE8D934422E8437500A320FC /* ILocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILocationManager.swift; sourceTree = "<group>"; };
+		EE8D934722E8443100A320FC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		EE8D934A22E8483700A320FC /* CLLocation+City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+City.swift"; sourceTree = "<group>"; };
+		EE8D934D22E8489D00A320FC /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		F625D3AFA56A766F6FFE54E7 /* Pods-DNA.iOS.ViewModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.ViewModels.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.ViewModels/Pods-DNA.iOS.ViewModels.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B657B301C3E305007F5BCF /* Pods-DNA.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA9CCB91EBE0117DE728585A /* Pods-DNA.iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -308,9 +316,11 @@
 		BA056B7A22E2624B00364519 /* DNA.iOS.Core */ = {
 			isa = PBXGroup;
 			children = (
+				EE8D934922E8481700A320FC /* Extensions */,
 				EE169A9C22E7476500554F0F /* Errors */,
 				EE169A7022E73B2400554F0F /* Models */,
 				EE169A9622E7444200554F0F /* Providers */,
+				EE8D934322E8433F00A320FC /* Managers */,
 				EE169A6A22E739C100554F0F /* Services */,
 				BA056B7C22E2624B00364519 /* Info.plist */,
 				EE169A9022E73F4500554F0F /* Startup.swift */,
@@ -366,6 +376,7 @@
 		EE169A7022E73B2400554F0F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE8D934C22E8486E00A320FC /* City */,
 				EE169A8E22E73E0D00554F0F /* WeatherOverView */,
 			);
 			path = Models;
@@ -482,6 +493,39 @@
 				EE169A9422E740A200554F0F /* main.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EE8D934322E8433F00A320FC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D934622E843A100A320FC /* Implementation */,
+				EE8D934422E8437500A320FC /* ILocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EE8D934622E843A100A320FC /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D934722E8443100A320FC /* LocationManager.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		EE8D934922E8481700A320FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D934A22E8483700A320FC /* CLLocation+City.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EE8D934C22E8486E00A320FC /* City */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D934D22E8489D00A320FC /* City.swift */,
+			);
+			path = City;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1019,14 +1063,18 @@
 				EE169A7E22E73C9100554F0F /* Snow.swift in Sources */,
 				EE169A8022E73CA900554F0F /* Sys.swift in Sources */,
 				EE169A8222E73CB800554F0F /* Pod.swift in Sources */,
+				EE8D934522E8437500A320FC /* ILocationManager.swift in Sources */,
 				EE169A7A22E73C4700554F0F /* Clouds.swift in Sources */,
 				EE169A8822E73D1E00554F0F /* Description.swift in Sources */,
 				EE169A9822E7445100554F0F /* IConfigurationProvider.swift in Sources */,
+				EE8D934E22E8489D00A320FC /* City.swift in Sources */,
+				EE8D934822E8443100A320FC /* LocationManager.swift in Sources */,
 				EE169A9122E73F4500554F0F /* Startup.swift in Sources */,
 				EE169A8B22E73D7600554F0F /* Wind.swift in Sources */,
 				EE169A7C22E73C5A00554F0F /* MainClass.swift in Sources */,
 				EE169A6C22E739DD00554F0F /* IApiService.swift in Sources */,
 				EE169A9E22E7477400554F0F /* CoreError.swift in Sources */,
+				EE8D934B22E8483700A320FC /* CLLocation+City.swift in Sources */,
 				EE169A9322E7401200554F0F /* ServiceLocator.swift in Sources */,
 				EE169A7822E73C1900554F0F /* List.swift in Sources */,
 			);

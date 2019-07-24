@@ -10,17 +10,28 @@ import UIKit
 import DNA_iOS_Core
 
 class ViewController: UIViewController {
-    
+    let locationManager = ServiceLocator.instance.resolve(ILoctionManager.self)!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setup()
+        self.setupLocationManager()
+        self.setupApiService()
     }
 
-    private func setup() {
+    private func setupLocationManager() {
+   
+        self.locationManager.setCurrentCityUpdatedHandler { (city) in
+            debugPrint(city)
+        }
+        self.locationManager.requestAuthorization(.always, true)
+    }
+
+    private func setupApiService() {
         let apiService = ServiceLocator.instance.resolve(IApiService.self)!
-        
+
         let moscowCityId = 5601538
+        
         apiService.fetchWeatherOverview(moscowCityId).then { (overview)  in
             debugPrint(overview)
             }.catch { (error) in
