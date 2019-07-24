@@ -7,8 +7,8 @@
 //
 
 public class WeatherCity: Codable {
-    let id: Int
-    let name: String
-    let country: String
-    let coord: Coord
+    public let id: Int
+    public let name: String
+    public let country: String
+    public let coord: Coord
 }

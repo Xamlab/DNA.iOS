@@ -6,15 +6,15 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class List: Codable {
-    let dt: Int
-    let main: MainClass
-    let weather: [Weather]
-    let clouds: Clouds
-    let wind: Wind
-    let snow: Snow
-    let sys: Sys
-    let dtTxt: String
+public class List: Codable {
+    public let dt: Int
+    public let main: MainClass
+    public let weather: [Weather]
+    public let clouds: Clouds
+    public let wind: Wind
+    public let snow: Snow
+    public let sys: Sys
+    public let dtTxt: String
     
     enum CodingKeys: String, CodingKey {
         case dt, main, weather, clouds, wind, snow, sys

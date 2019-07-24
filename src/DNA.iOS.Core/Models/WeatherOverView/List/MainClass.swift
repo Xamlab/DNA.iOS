@@ -6,15 +6,15 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class MainClass: Codable {
-    let temp: Double
-    let tempMin: Double
-    let tempMax: Double
-    let pressure: Double
-    let seaLevel: Double
-    let grndLevel: Double
-    let humidity: Int
-    let tempKf: Double
+public class MainClass: Codable {
+    public let temp: Double
+    public let tempMin: Double
+    public let tempMax: Double
+    public let pressure: Double
+    public let seaLevel: Double
+    public let grndLevel: Double
+    public let humidity: Int
+    public let tempKf: Double
     
     enum CodingKeys: String, CodingKey {
         case temp

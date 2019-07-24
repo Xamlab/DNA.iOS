@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WeatherOverviewViewController.swift
 //  DNA.iOS
 //
 //  Created by Gagik Kyurkchyan on 7/19/19.
@@ -8,43 +8,29 @@
 
 import UIKit
 import DNA_iOS_Core
+import DNA_iOS_ViewModels
+import ReactiveKit
 
-class ViewController: UIViewController {
-    let locationManager = ServiceLocator.instance.resolve(ILoctionManager.self)!
-    var currentCity: City! { didSet { self.fetchWeatherOverview() }}
-    
+class WeatherOverviewViewController: WeatherController {
+    @IBOutlet weak var weatherCollectionView: UICollectionView!
+    private var viewModel: IWeatherOverviewViewModel!
     
     override func viewDidLoad() {
+        self.initialSetup()
         super.viewDidLoad()
-        self.setupLocationManager()
+        self.setupViewModel()
     }
     
-    private func setupLocationManager() {
-        self.locationManager.setCurrentCityUpdatedHandler { [unowned self] (city) in
-            guard self.currentCity != city else { return }
-            print(city)
-            self.currentCity = city
-        }
-        self.locationManager.requestAuthorization(.always, true)
+    private func initialSetup() {
+        self.collectionView = self.weatherCollectionView
     }
     
-    private func fetchWeatherOverview() {
-        let apiService = ServiceLocator.instance.resolve(IApiService.self)!
-        apiService.fetchWeatherOverview(self.currentCity).then { (overview)  in
-            debugPrint(overview)
-            }.catch { (error) in
-                guard let coreError = error as? CoreError else { return }
-                
-                switch coreError {
-                case .noInternetConnection:
-                    debugPrint("noInternetConnection")
-                case .notFoundedCityInRepository:
-                    debugPrint("notFoundedCityInRepository")
-                case let .httpException(message, code):
-                    print("httpException = ", message, ", ", code ?? String())
-                }
-                debugPrint(error)
-        }
+    private func setupViewModel() {
+        self.viewModel = ServiceLocator.instance.resolve(IWeatherOverviewViewModel.self)
+        
+        self.viewModel.result.bind(to: self.weatherItemViewModel).dispose(in: self.bag)
+        
+        self.viewModel.setupCommand.execute()
     }
 }
 

@@ -7,9 +7,9 @@
 //
 
 public class WeatherOverview: Codable {
-    let cod: String
-    let message: Double
-    let cnt: Int
-    let list: [List]
-    let city: WeatherCity
+    public let cod: String
+    public let message: Double
+    public let cnt: Int
+    public let list: [List]
+    public let city: WeatherCity
 }

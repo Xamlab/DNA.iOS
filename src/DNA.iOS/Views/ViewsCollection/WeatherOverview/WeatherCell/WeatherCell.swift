@@ -1,12 +1,13 @@
 //
 //  WeatherCell.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
 import UIKit
+import DNA_iOS_ViewModels
 
 enum WeatherCells {
 	case extendedInfo
@@ -46,13 +47,13 @@ class WeatherCell: UICollectionViewCell {
 	private let headerCell: UICollectionViewCell.Type = DailyWeatherCell.self
 	private let footerCell: UICollectionViewCell.Type = ExtendedInfoCell.self
 	private let cell: UICollectionViewCell.Type = TodayWeatherCell.self
-	
-	var datasourceItem: WeatherOverviewViewModel! {
-		didSet {
-			guard let _ = self.datasourceItem else { return }
-			self.setupViews()
-		}
-	}
+
+    var datasourceItem: WeatherItemViewModel! {
+        didSet {
+            guard let _ = self.datasourceItem else { return }
+            self.setupViews()
+        }
+    }
 	
 	
 	// MARK: - Methods Setup -
@@ -83,8 +84,8 @@ extension WeatherCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return 1
 	}
-	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TodayWeatherCell.self), for: indexPath) as? TodayWeatherCell else { return UICollectionViewCell() }
 		cell.datasourceItem = self.datasourceItem.todayDescription
 		return cell
@@ -92,11 +93,10 @@ extension WeatherCell: UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 		var reusableView = UICollectionViewCell()
-		
 		switch kind {
 		case UICollectionView.elementKindSectionHeader:
 			guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(self.headerCell), for: indexPath) as? DailyWeatherCell else { return reusableView }
-			header.datasourceItem = self.datasourceItem.listViewModelsForWeekDays
+			header.datasourceItem = self.datasourceItem.listItemViewModelsForWeekDays
 			reusableView = header
 		case UICollectionView.elementKindSectionFooter:
 			guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(self.footerCell), for: indexPath) as? ExtendedInfoCell else { return reusableView }
@@ -115,9 +115,8 @@ extension WeatherCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: frame.width, height: WeatherCells.todayDescription.defaultHeight)
 	}
-	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-		let cellsCount = self.datasourceItem.listViewModelsForWeekDays.count
+		let cellsCount = self.datasourceItem.listItemViewModelsForWeekDays.count
 		let height = WeatherCells.dailyCells(cellsCount).defaultHeight
 		return CGSize(width: frame.width, height: height)
 	}

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class Wind: Codable {
-    let speed: Double
-    let deg: Double
+public class Wind: Codable {
+    public let speed: Double
+    public let deg: Double
 }

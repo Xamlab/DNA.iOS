@@ -1,12 +1,13 @@
 //
 //  WeatherCollectionViewFlowLayout.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
 import UIKit
+import DNA_iOS_ViewModels
 
 class WeatherCollectionViewFlowLayout: UICollectionViewFlowLayout {
 	var attributes: [UICollectionViewLayoutAttributes] = []
@@ -103,15 +104,3 @@ enum WeatherHeaders: Int {
 	}
 }
 
-struct GlobalConstant {
-	static let screenHeight = UIScreen.main.bounds.height
-	static let screenWidth = UIScreen.main.bounds.width
-	static let margin: CGFloat = 16
-	
-	struct Units {
-		static let windSpeed = "km/hr"
-		static let precipitation = "cm"
-		static let pressure = "hPa"
-		static let visibility = "km"
-	}
-}

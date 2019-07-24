@@ -1,12 +1,13 @@
 //
 //  VerticalWeatherCell.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
 import UIKit
+import DNA_iOS_ViewModels
 
 class VerticalWeatherCell: UICollectionViewCell {
 	
@@ -26,16 +27,16 @@ class VerticalWeatherCell: UICollectionViewCell {
 		let iv = AutoFittingImageView()
 		return iv
 	}()
-	
-	var datasourceItem: ListViewModel! {
-		didSet {
-			guard let _ = self.datasourceItem else { return }
-			self.setupViews()
-			self.hourLabel.text = self.datasourceItem.hour
-			self.temperatureLabel.text = self.datasourceItem.temperature
-			self.weatherIcon.image = self.datasourceItem.weatherIcon
-		}
-	}
+
+    var datasourceItem: ListItemViewModel! {
+        didSet {
+            guard let _ = self.datasourceItem else { return }
+            self.setupViews()
+            self.hourLabel.text = self.datasourceItem.hour
+            self.temperatureLabel.text = self.datasourceItem.temperature
+            self.weatherIcon.image = self.datasourceItem.weatherIcon
+        }
+    }
 	
 	
 	// MARK: - Methods Setup -

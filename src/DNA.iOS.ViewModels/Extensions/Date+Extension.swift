@@ -1,6 +1,6 @@
 //
 //  Date+Extension.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/27/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.

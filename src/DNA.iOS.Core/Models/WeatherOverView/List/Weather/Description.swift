@@ -6,7 +6,7 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-enum Description: String, Codable {
+public enum Description: String, Codable {
     case brokenClouds = "broken clouds"
     case clearSky = "clear sky"
     case fewClouds = "few clouds"

@@ -6,4 +6,17 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-import Foundation
+import Swinject
+import SwinjectAutoregistration
+
+public extension Container {
+    @discardableResult
+    func registerViewModelDepdencies() -> Container {
+        
+        // MARK: - ViewModels -
+        
+        self.autoregister(IWeatherOverviewViewModel.self, initializer: WeatherOverviewViewModel.init)
+        
+        return self
+    }
+}

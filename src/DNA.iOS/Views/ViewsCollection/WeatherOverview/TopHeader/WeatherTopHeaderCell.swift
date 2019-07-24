@@ -1,12 +1,13 @@
 //
 //  WeatherTopHeaderCell.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
 import UIKit
+import DNA_iOS_ViewModels
 
 class WeatherTopHeaderCell: UICollectionViewCell {
 	
@@ -39,18 +40,18 @@ class WeatherTopHeaderCell: UICollectionViewCell {
 	
 	private var topConstraint: NSLayoutConstraint?
 	private var maxHeaderHeight: CGFloat?
-	
-	var datasourceItem: WeatherOverviewViewModel! {
-		didSet {
-			guard let weatherOverview = self.datasourceItem else { return }
-			self.setupViews()
-			self.cityNameTextView.attributedText = weatherOverview.cityAndDescriptionAttributedString
-			self.temperatureLabel.text = weatherOverview.temperature
-			self.todayLabel.text = weatherOverview.weekDay
-			self.temperatureLowLabel.text = weatherOverview.lowTemperature
-			self.temperatureHighLabel.text = weatherOverview.highTemperature
-		}
-	}
+
+    var datasourceItem: WeatherItemViewModel! {
+        didSet {
+            guard let weatherOverview = self.datasourceItem else { return }
+            self.setupViews()
+            self.cityNameTextView.attributedText = weatherOverview.cityAndDescriptionAttributedString
+            self.temperatureLabel.text = weatherOverview.temperature
+            self.todayLabel.text = weatherOverview.weekDay
+            self.temperatureLowLabel.text = weatherOverview.lowTemperature
+            self.temperatureHighLabel.text = weatherOverview.highTemperature
+        }
+    }
 	
 	
 	override func layoutSubviews() {

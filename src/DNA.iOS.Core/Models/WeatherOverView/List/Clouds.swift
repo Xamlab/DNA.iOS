@@ -6,6 +6,6 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class Clouds: Codable {
-    let all: Int
+public class Clouds: Codable {
+    public let all: Int
 }

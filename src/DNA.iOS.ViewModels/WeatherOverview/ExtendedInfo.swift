@@ -9,7 +9,7 @@
 public enum ExtendedInfo: String, CaseIterable {
 	case sunrise, sunset, chanceOfRain, humidity, wind, feelLike, precipitation, pressure, visibility, uvIndex
 	
-	var stringValue: String {
+	public var stringValue: String {
 		var textString = ""
 		switch self {
 		case .uvIndex:

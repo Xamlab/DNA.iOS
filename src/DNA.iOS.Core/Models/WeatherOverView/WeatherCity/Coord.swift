@@ -6,7 +6,7 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class Coord: Codable {
-    let lon: Double
-    let lat: Double
+public class Coord: Codable {
+    public let lon: Double
+    public let lat: Double
 }

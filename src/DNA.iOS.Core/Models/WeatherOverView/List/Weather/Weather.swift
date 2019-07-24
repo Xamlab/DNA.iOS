@@ -6,9 +6,9 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class Weather: Codable {
-    let id: Int
-    let main: MainEnum
-    let description: Description
-    let icon: String
+public class Weather: Codable {
+    public let id: Int
+    public let main: MainEnum
+    public let description: Description
+    public let icon: String
 }

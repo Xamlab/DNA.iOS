@@ -1,12 +1,13 @@
 //
 //  DailyDetailCell.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
 import UIKit
+import DNA_iOS_ViewModels
 
 class DailyDetailCell: UICollectionViewCell {
 	
@@ -29,17 +30,17 @@ class DailyDetailCell: UICollectionViewCell {
 		let imageView = AutoFittingImageView()
 		return imageView
 	}()
-	
-	var datasourceItem: ListViewModel! {
-		didSet {
-			guard let _ = self.datasourceItem  else { return }
-			self.setupViews()
-			self.dayLabel.text = self.datasourceItem.weekDay
-			self.weatherIcon.image = self.datasourceItem.weatherIcon
-			self.temperatureLowLabel.text = self.datasourceItem.lowTemperature
-			self.temperatureHighLabel.text = self.datasourceItem.highTemperature
-		}
-	}
+
+    var datasourceItem: ListItemViewModel! {
+        didSet {
+            guard let _ = self.datasourceItem  else { return }
+            self.setupViews()
+            self.dayLabel.text = self.datasourceItem.weekDay
+            self.weatherIcon.image = self.datasourceItem.weatherIcon
+            self.temperatureLowLabel.text = self.datasourceItem.lowTemperature
+            self.temperatureHighLabel.text = self.datasourceItem.highTemperature
+        }
+    }
 	
 	
 	// MARK: - Methods Setup -

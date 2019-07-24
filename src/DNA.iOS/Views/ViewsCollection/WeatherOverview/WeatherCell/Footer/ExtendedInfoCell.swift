@@ -1,12 +1,13 @@
 //
 //  ExtendedInfoCell.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
 import UIKit
+import DNA_iOS_ViewModels
 
 class ExtendedInfoCell: UICollectionViewCell {
 	
@@ -25,13 +26,13 @@ class ExtendedInfoCell: UICollectionViewCell {
 		cv.register(ExtendedDetailCell.self, forCellWithReuseIdentifier: NSStringFromClass(ExtendedDetailCell.self))
 		return cv
 	}()
-	
-	var datasourceItem: [(ExtendedInfo, String)]! {
-		didSet{
-			guard let _ = datasourceItem  else { return }
-			self.setupViews()
-		}
-	}
+
+    var datasourceItem: [(ExtendedInfo, String)]! {
+        didSet{
+            guard let _ = datasourceItem  else { return }
+            self.setupViews()
+        }
+    }
 	
 	
 	// MARK: - Methods Setup -

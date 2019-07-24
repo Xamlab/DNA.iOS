@@ -1,6 +1,6 @@
 //
 //  CancellationToken.swift
-//  BoxpointViewModels
+//  DNA.iOS.ViewModels
 //
 //  Created by Khachatur Hakobyan on 3/16/19.
 //  Copyright © 2019 Tickster. All rights reserved.

@@ -1,12 +1,13 @@
 //
 //  WeatherSecondHeaderCellCollectionViewCell.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
 import UIKit
+import DNA_iOS_ViewModels
 
 class WeatherSecondHeaderCell: UICollectionViewCell {
 	
@@ -25,13 +26,13 @@ class WeatherSecondHeaderCell: UICollectionViewCell {
 	
 	private let topSeparator = SeparationLineView()
 	private let bottomSeparator = SeparationLineView()
-	
-	var datasourceItem: [ListViewModel]! {
-		didSet{
-			guard let _ = self.datasourceItem else { return }
-			self.setupViews()
-		}
-	}
+
+    var datasourceItem: [ListItemViewModel]! {
+        didSet{
+            guard let _ = self.datasourceItem else { return }
+            self.setupViews()
+        }
+    }
 	
 	
 	// MARK: - Methods Setup -

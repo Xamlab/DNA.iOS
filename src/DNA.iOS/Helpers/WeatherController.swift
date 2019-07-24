@@ -1,17 +1,19 @@
 //
 //  WeatherController.swift
-//  Xam Weather
+//  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
 import UIKit
+import DNA_iOS_ViewModels
+import Bond
 
 class WeatherController: UIViewController {
 	private let headerCells: [UICollectionViewCell.Type] = [WeatherTopHeaderCell.self, WeatherSecondHeaderCell.self]
 	private let cells: [UICollectionViewCell.Type] = [WeatherCell.self]
-	var weatherOverview: WeatherOverviewViewModel! {didSet{self.collectionView.reloadData()}}
+	var weatherItemViewModel: Observable<WeatherItemViewModel?> = Observable<WeatherItemViewModel?>(nil)
 	var collectionView: UICollectionView! = nil
 
 	private let backgroundImageView: UIImageView = {
@@ -44,6 +46,7 @@ class WeatherController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setup()
 		self.setupActivityIndicator()
 		self.setupErrorMessageLabel()
 		self.setupCollectionView()
@@ -52,6 +55,12 @@ class WeatherController: UIViewController {
 	
 	// MARK: - Methods Setup -
 
+    private func setup() {
+        self.weatherItemViewModel.observeNext { [unowned self] (_) in
+            self.collectionView.reloadData()
+        }.dispose(in: self.bag)
+    }
+    
 	private func setupActivityIndicator() {
 		self.view.addSubview(self.activityIndicatorView)
 		self.activityIndicatorView.anchorCenterXToSuperview()
@@ -103,16 +112,16 @@ extension WeatherController: UICollectionViewDelegate {
 
 extension WeatherController: UICollectionViewDataSource {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
-		return (self.weatherOverview == nil ? 0 : self.headerCells.count)
+		return (self.weatherItemViewModel.value == nil ? 0 : self.headerCells.count)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return (section == WeatherHeaders.topHeader.section ? 0 : self.cells.count)
 	}
-	
+    
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(WeatherCell.self), for: indexPath) as? WeatherCell else { return UICollectionViewCell() }
-		cell.datasourceItem = self.weatherOverview
+		cell.datasourceItem = self.weatherItemViewModel.value
 		return cell
 	}
 	
@@ -123,11 +132,11 @@ extension WeatherController: UICollectionViewDataSource {
 		switch indexPath.section {
 		case WeatherHeaders.topHeader.section:
 			guard let topHeaderCell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(WeatherTopHeaderCell.self), for: indexPath) as? WeatherTopHeaderCell else { return reusableView }
-			topHeaderCell.datasourceItem = self.weatherOverview
+			topHeaderCell.datasourceItem = self.weatherItemViewModel.value
 			reusableView = topHeaderCell
 		case WeatherHeaders.centerHeader.section:
 			guard let secondHeaderCell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(WeatherSecondHeaderCell.self), for: indexPath) as? WeatherSecondHeaderCell else { return reusableView }
-			secondHeaderCell.datasourceItem = self.weatherOverview.listViewModels
+            secondHeaderCell.datasourceItem = self.weatherItemViewModel.value?.listItemViewModels
 			reusableView = secondHeaderCell
 		default: break
 		}

@@ -12,6 +12,7 @@ import DNA_iOS_Core
 _ = autoreleasepool {
     ServiceLocator.instance
         .registerCoreDependencies()
+        .registerViewModelDepdencies()
     
     UIApplicationMain(CommandLine.argc,
                       CommandLine.unsafeArgv,

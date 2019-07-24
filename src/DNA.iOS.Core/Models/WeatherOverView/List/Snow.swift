@@ -6,8 +6,8 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class Snow: Codable {
-    let the3H: Double?
+public class Snow: Codable {
+    public let the3H: Double?
     
     enum CodingKeys: String, CodingKey {
         case the3H = "3h"

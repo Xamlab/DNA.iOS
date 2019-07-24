@@ -1,6 +1,6 @@
 //
 //  ICommand.swift
-//  BoxpointViewModels
+//  DNA.iOS.ViewModels
 //
 //  Created by Khachatur Hakobyan on 3/5/19.
 //  Copyright © 2019 Tickster. All rights reserved.

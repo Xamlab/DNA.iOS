@@ -6,7 +6,7 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-enum MainEnum: String, Codable {
+public enum MainEnum: String, Codable {
     case clear = "Clear"
     case clouds = "Clouds"
     case snow = "Snow"

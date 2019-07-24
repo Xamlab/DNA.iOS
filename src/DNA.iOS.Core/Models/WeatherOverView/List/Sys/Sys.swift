@@ -6,6 +6,6 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class Sys: Codable {
-    let pod: Pod
+public class Sys: Codable {
+    public let pod: Pod
 }

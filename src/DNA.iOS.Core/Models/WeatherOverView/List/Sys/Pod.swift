@@ -6,7 +6,7 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-enum Pod: String, Codable {
+public enum Pod: String, Codable {
     case d = "d"
     case n = "n"
 }
