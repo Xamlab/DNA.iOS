@@ -9,5 +9,5 @@
 import Promises
 
 public protocol IApiService {
-    func fetchWeatherOverview(_ cityId: Int) -> Promise<WeatherOverview>
+    func fetchWeatherOverview(_ city: City) -> Promise<WeatherOverview>
 }

@@ -11,7 +11,8 @@ import Alamofire
 
 internal class ApiService: IApiService {
     private let configurationProvider: IConfigurationProvider
-    
+    private let cityRespository: ICityRespository
+
     private enum Endpoint {
         case weatherOverview
         
@@ -23,12 +24,17 @@ internal class ApiService: IApiService {
     }
     
     
-    init(configurationProvider: IConfigurationProvider) {
+    init(_ configurationProvider: IConfigurationProvider,
+         _ cityRespository: ICityRespository) {
         self.configurationProvider = configurationProvider
+        self.cityRespository = cityRespository
     }
+
     
-    
-    func fetchWeatherOverview(_ cityId: Int) -> Promise<WeatherOverview> {
+    func fetchWeatherOverview(_ city: City) -> Promise<WeatherOverview> {
+        guard let cityId = self.cityRespository.cities.first(where: { $0.name.lowercased().contains(city.name.lowercased()) })?.id else {
+            return Promise<WeatherOverview>(CoreError.notFoundedCityInRepository)
+        }
         enum Keys: String { case appid, id }
         
         let parameters: Parameters = [
@@ -47,6 +53,8 @@ internal class ApiService: IApiService {
                                               _ encoding: ParameterEncoding = URLEncoding.default,
                                               _ credentials: (username: String, password: String)? = nil) -> Promise<T> {
         
+        guard Network.reachability!.isConnectedToNetwork else { return Promise<T>(CoreError.noInternetConnection) }
+
         let url = "\(self.configurationProvider.apiBaseUrl)/\(self.configurationProvider.apiVersion)/\(endPoint.path)"
         
         let promise = Promise<T> { fulfill, reject in

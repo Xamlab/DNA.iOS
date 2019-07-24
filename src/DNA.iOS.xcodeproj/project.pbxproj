@@ -54,6 +54,9 @@
 		EE8D934822E8443100A320FC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D934722E8443100A320FC /* LocationManager.swift */; };
 		EE8D934B22E8483700A320FC /* CLLocation+City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D934A22E8483700A320FC /* CLLocation+City.swift */; };
 		EE8D934E22E8489D00A320FC /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D934D22E8489D00A320FC /* City.swift */; };
+		EE8D935122E87A0300A320FC /* ICityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D935022E87A0300A320FC /* ICityRepository.swift */; };
+		EE8D935422E87A1900A320FC /* CityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D935322E87A1900A320FC /* CityRepository.swift */; };
+		EE8D935722E883F800A320FC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D935622E883F800A320FC /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +175,9 @@
 		EE8D934722E8443100A320FC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EE8D934A22E8483700A320FC /* CLLocation+City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+City.swift"; sourceTree = "<group>"; };
 		EE8D934D22E8489D00A320FC /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		EE8D935022E87A0300A320FC /* ICityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICityRepository.swift; sourceTree = "<group>"; };
+		EE8D935322E87A1900A320FC /* CityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRepository.swift; sourceTree = "<group>"; };
+		EE8D935622E883F800A320FC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		F625D3AFA56A766F6FFE54E7 /* Pods-DNA.iOS.ViewModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.ViewModels.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS.ViewModels/Pods-DNA.iOS.ViewModels.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B657B301C3E305007F5BCF /* Pods-DNA.iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA9CCB91EBE0117DE728585A /* Pods-DNA.iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOSTests.release.xcconfig"; path = "Target Support Files/Pods-DNA.iOSTests/Pods-DNA.iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -316,9 +322,11 @@
 		BA056B7A22E2624B00364519 /* DNA.iOS.Core */ = {
 			isa = PBXGroup;
 			children = (
+				EE8D935522E883B300A320FC /* Helpers */,
 				EE8D934922E8481700A320FC /* Extensions */,
 				EE169A9C22E7476500554F0F /* Errors */,
 				EE169A7022E73B2400554F0F /* Models */,
+				EE8D934F22E879E400A320FC /* Repository */,
 				EE169A9622E7444200554F0F /* Providers */,
 				EE8D934322E8433F00A320FC /* Managers */,
 				EE169A6A22E739C100554F0F /* Services */,
@@ -526,6 +534,31 @@
 				EE8D934D22E8489D00A320FC /* City.swift */,
 			);
 			path = City;
+			sourceTree = "<group>";
+		};
+		EE8D934F22E879E400A320FC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D935222E87A0600A320FC /* Implementation */,
+				EE8D935022E87A0300A320FC /* ICityRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EE8D935222E87A0600A320FC /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D935322E87A1900A320FC /* CityRepository.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		EE8D935522E883B300A320FC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D935622E883F800A320FC /* Reachability.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1058,6 +1091,7 @@
 				EE169A7622E73BED00554F0F /* Coord.swift in Sources */,
 				EE169A7422E73BBF00554F0F /* WeatherCity.swift in Sources */,
 				EE169A7222E73BA000554F0F /* WeatherOverview.swift in Sources */,
+				EE8D935722E883F800A320FC /* Reachability.swift in Sources */,
 				EE169A8622E73D0400554F0F /* MainEnum.swift in Sources */,
 				EE169A8422E73CEA00554F0F /* Weather.swift in Sources */,
 				EE169A7E22E73C9100554F0F /* Snow.swift in Sources */,
@@ -1072,8 +1106,10 @@
 				EE169A9122E73F4500554F0F /* Startup.swift in Sources */,
 				EE169A8B22E73D7600554F0F /* Wind.swift in Sources */,
 				EE169A7C22E73C5A00554F0F /* MainClass.swift in Sources */,
+				EE8D935122E87A0300A320FC /* ICityRepository.swift in Sources */,
 				EE169A6C22E739DD00554F0F /* IApiService.swift in Sources */,
 				EE169A9E22E7477400554F0F /* CoreError.swift in Sources */,
+				EE8D935422E87A1900A320FC /* CityRepository.swift in Sources */,
 				EE8D934B22E8483700A320FC /* CLLocation+City.swift in Sources */,
 				EE169A9322E7401200554F0F /* ServiceLocator.swift in Sources */,
 				EE169A7822E73C1900554F0F /* List.swift in Sources */,

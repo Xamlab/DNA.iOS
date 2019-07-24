@@ -7,5 +7,7 @@
 //
 
 public enum CoreError: Error {
+    case noInternetConnection
+    case notFoundedCityInRepository
     case httpException(message: String, code: Int?)
 }

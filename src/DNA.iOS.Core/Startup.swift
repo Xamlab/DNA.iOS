@@ -13,6 +13,9 @@ public extension Container {
     @discardableResult
     func registerCoreDependencies() -> Container {
         
+        // MARK: - Respositories -
+        self.autoregister(ICityRespository.self, initializer: CityRepository.init)
+        
         // MARK: - Providers -
         self.autoregister(IConfigurationProvider.self, initializer: ConfigurationProvider.init)
 

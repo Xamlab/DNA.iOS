@@ -6,7 +6,7 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-class WeatherCity: Codable {
+public class WeatherCity: Codable {
     let id: Int
     let name: String
     let country: String
