@@ -37,7 +37,7 @@ class TodayWeatherCell: UICollectionViewCell {
 	func setupViews() {
 		self.addSubview(self.todayLabel)
 		self.addSubview(self.separatorLineView)
-		self.todayLabel.anchorWithConstantsToTop(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 4, leftConstant: GlobalConstant.margin, bottomConstant: 4, rightConstant: GlobalConstant.margin)
+		self.todayLabel.anchorWithConstantsToTop(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 4, leftConstant: GlobalConstant.margin.value, bottomConstant: 4, rightConstant: GlobalConstant.margin.value)
 		_ = self.separatorLineView.anchor(top: nil, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
 		self.separatorLineView.backgroundColor = UIColor.App.transparentWhite.value
 		self.separatorLineView.isHidden = false

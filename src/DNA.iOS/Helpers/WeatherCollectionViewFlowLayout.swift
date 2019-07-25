@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DNA_iOS_ViewModels
 
 class WeatherCollectionViewFlowLayout: UICollectionViewFlowLayout {
 	var attributes: [UICollectionViewLayoutAttributes] = []
@@ -51,7 +50,7 @@ class WeatherCollectionViewFlowLayout: UICollectionViewFlowLayout {
 		let offset = collectionView?.contentOffset ?? CGPoint.zero
 		
 		// get all headers
-		let headers = attributes.filter { attribute -> Bool in
+		let headers = self.attributes.filter { attribute -> Bool in
 			return attribute.representedElementKind == UICollectionView.elementKindSectionHeader
 		}
 		guard let topHeader = headers.first, let secondHeader = headers.last else { return nil }
@@ -65,7 +64,7 @@ class WeatherCollectionViewFlowLayout: UICollectionViewFlowLayout {
 		secondHeader.frame.origin.y = topHeader.frame.origin.y + topHeader.frame.size.height
 		
 		// Get all cells attributes
-		let cells = attributes.filter { (attribute) -> Bool in
+		let cells = self.attributes.filter { (attribute) -> Bool in
 			return (attribute.representedElementKind != UICollectionView.elementKindSectionHeader) &&  (attribute.representedElementKind != UICollectionView.elementKindSectionFooter)
 		}
 		
@@ -74,33 +73,7 @@ class WeatherCollectionViewFlowLayout: UICollectionViewFlowLayout {
 		for oneCell in cells {
 			oneCell.frame.origin.y = limit
 		}
-		return attributes
-	}
-}
-
-enum WeatherHeaders: Int {
-	case topHeader, centerHeader
-	
-	var section: Int {
-		return self.rawValue
-	}
-	
-	var defaultHeight: CGFloat {
-		switch self {
-		case .topHeader:
-			return 0.48 * GlobalConstant.screenHeight
-		case .centerHeader:
-			return 0.17 * GlobalConstant.screenHeight
-		}
-	}
-	
-	var minimumHeight: CGFloat {
-		switch self {
-		case .topHeader:
-			return 100
-		case .centerHeader:
-			return self.defaultHeight
-		}
+		return self.attributes
 	}
 }
 

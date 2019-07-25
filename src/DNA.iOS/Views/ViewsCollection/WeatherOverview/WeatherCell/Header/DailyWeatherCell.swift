@@ -15,7 +15,7 @@ class DailyWeatherCell: UICollectionViewCell {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .vertical
 		layout.minimumLineSpacing = 0
-		layout.sectionInset = UIEdgeInsets(top: 10, left: GlobalConstant.margin, bottom: 0, right: GlobalConstant.margin)
+		layout.sectionInset = UIEdgeInsets(top: 10, left: GlobalConstant.margin.value, bottom: 0, right: GlobalConstant.margin.value)
 		let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		cv.backgroundColor = .clear
 		cv.showsVerticalScrollIndicator = false
@@ -73,6 +73,6 @@ extension DailyWeatherCell: UICollectionViewDataSource {
 
 extension DailyWeatherCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: self.frame.width - 2 * GlobalConstant.margin, height: 30)
+		return CGSize(width: self.frame.width - 2 * GlobalConstant.margin.value, height: 30)
 	}
 }

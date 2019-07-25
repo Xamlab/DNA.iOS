@@ -30,7 +30,8 @@ enum WeatherCells {
 }
 
 class WeatherCell: UICollectionViewCell {
-	
+	private enum Keys: String { case setOffset }
+
 	private lazy var cellCollectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .vertical
@@ -62,7 +63,9 @@ class WeatherCell: UICollectionViewCell {
 		self.addSubview(cellCollectionView)
 		self.cellCollectionView.fillSuperview()
 		self.setupCollectionView()
-		NotificationCenter.default.addObserver(self, selector: #selector(handleSetOffset), name: Notification.Name(rawValue: "setOffset"), object: nil)
+		
+		
+		NotificationCenter.default.addObserver(self, selector: #selector(handleSetOffset), name: Notification.Name(rawValue: Keys.setOffset.rawValue), object: nil)
 	}
 	
 	private func setupCollectionView() {

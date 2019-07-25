@@ -110,7 +110,7 @@ public class WeatherItemViewModel: WeatherFormatable {
         case .precipitation:
             return "0 cm"
         case .pressure:
-            return addUnit(GlobalConstant.Units.pressure, toNumber: list.main.pressure)
+            return addUnit(ExtendedInfoUnits.pressure.rawValue, toNumber: list.main.pressure)
         case .visibility:
             return "14.5 km"
         case .uvIndex:
@@ -119,15 +119,9 @@ public class WeatherItemViewModel: WeatherFormatable {
     }
 }
 
-public struct GlobalConstant {
-    public static let screenHeight = UIScreen.main.bounds.height
-    public static let screenWidth = UIScreen.main.bounds.width
-    public static let margin: CGFloat = 16
-    
-    public struct Units {
-        static let windSpeed = "km/hr"
-        static let precipitation = "cm"
-        static let pressure = "hPa"
-        static let visibility = "km"
-    }
+enum  ExtendedInfoUnits: String {
+	case windSpeed = "km/hr"
+	case precipitation = "cm"
+	case pressure = "hPa"
+	case visibility = "km"
 }

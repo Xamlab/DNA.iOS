@@ -16,7 +16,7 @@ class ExtendedInfoCell: UICollectionViewCell {
 		layout.scrollDirection = .vertical
 		layout.minimumInteritemSpacing = 0
 		layout.minimumLineSpacing = 0
-		layout.sectionInset = UIEdgeInsets(top: 0, left: GlobalConstant.margin, bottom: 0, right: GlobalConstant.margin)
+		layout.sectionInset = UIEdgeInsets(top: 0, left: GlobalConstant.margin.value, bottom: 0, right: GlobalConstant.margin.value)
 		let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		cv.backgroundColor = .clear
 		cv.showsVerticalScrollIndicator = false
@@ -63,6 +63,6 @@ extension ExtendedInfoCell: UICollectionViewDataSource {
 
 extension ExtendedInfoCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: (frame.width - 2 * GlobalConstant.margin) / 2, height: WeatherCells.extendedInfo.defaultHeight)
+		return CGSize(width: (frame.width - 2 * GlobalConstant.margin.value) / 2, height: WeatherCells.extendedInfo.defaultHeight)
 	}
 }

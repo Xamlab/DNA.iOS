@@ -10,7 +10,8 @@ import UIKit
 
 class AutoFittingImageView: UIImageView {
 	
-	public init() {
+	
+	init() {
 		super.init(frame: .zero)
 		self.setup()
 	}

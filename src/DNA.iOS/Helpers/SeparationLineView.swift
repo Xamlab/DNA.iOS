@@ -10,6 +10,7 @@ import UIKit
 
 class SeparationLineView: UIView {
 	
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		self.setup()
@@ -21,6 +22,6 @@ class SeparationLineView: UIView {
 	}
 	
 	private func setup() {
-		backgroundColor = UIColor.App.transparentWhite.value
+		self.backgroundColor = UIColor.App.transparentWhite.value
 	}
 }

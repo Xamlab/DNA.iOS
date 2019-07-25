@@ -10,12 +10,13 @@ import UIKit
 
 class PassiveTextView: UITextView {
 	
-	public init() {
+	
+	init() {
 		super.init(frame: .zero, textContainer: nil)
 		self.setupPassiveState()
 	}
 	
-	required public init?(coder aDecoder: NSCoder) {
+	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		self.setupPassiveState()
 	}

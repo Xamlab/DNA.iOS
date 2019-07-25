@@ -10,7 +10,8 @@ import UIKit
 
 class WhiteLabel: UILabel {
 	
-	public init(font: UIFont? = nil) {
+	
+	init(font: UIFont? = nil) {
 		super.init(frame: .zero)
 		self.font = font
 		self.setupColor()

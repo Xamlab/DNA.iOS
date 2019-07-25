@@ -10,6 +10,8 @@ import UIKit
 import DNA_iOS_ViewModels
 
 class WeatherSecondHeaderCell: UICollectionViewCell {
+	private let topSeparator = SeparationLineView()
+	private let bottomSeparator = SeparationLineView()
 	
 	private lazy var cellCollectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
@@ -24,9 +26,6 @@ class WeatherSecondHeaderCell: UICollectionViewCell {
 		return cv
 	}()
 	
-	private let topSeparator = SeparationLineView()
-	private let bottomSeparator = SeparationLineView()
-
     var datasourceItem: [ListItemViewModel]! {
         didSet{
             guard let _ = self.datasourceItem else { return }
@@ -49,29 +48,5 @@ class WeatherSecondHeaderCell: UICollectionViewCell {
 		
 		self.bottomSeparator.anchorToTop(top: nil, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor)
 		self.bottomSeparator.heightAnchor.constraint(equalToConstant:  1 / UIScreen.main.scale).isActive = true
-	}
-}
-
-
-// MARK: - UICollectionViewDelegateFlowLayout -
-
-extension WeatherSecondHeaderCell: UICollectionViewDelegateFlowLayout {
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: 42, height: frame.height - 20)
-	}
-}
-
-
-// MARK: - UICollectionViewDataSource -
-
-extension WeatherSecondHeaderCell: UICollectionViewDataSource {
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return self.datasourceItem.count
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(VerticalWeatherCell.self), for: indexPath) as? VerticalWeatherCell else { return UICollectionViewCell() }
-		cell.datasourceItem = self.datasourceItem[indexPath.row]
-		return cell
 	}
 }

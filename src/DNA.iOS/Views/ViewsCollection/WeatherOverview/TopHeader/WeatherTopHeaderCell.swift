@@ -82,8 +82,8 @@ class WeatherTopHeaderCell: UICollectionViewCell {
 		self.temperatureLowLabel.textAlignment = .right
 		addSubview(stackView)
 		
-		_  = stackView.anchor(top: nil, left: nil, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: GlobalConstant.margin, widthConstant: 66, heightConstant: 30)
-		_ = self.todayLabel.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: GlobalConstant.margin, bottomConstant: 0, rightConstant: 0, widthConstant: (GlobalConstant.screenWidth - 2 * GlobalConstant.margin) * 0.6, heightConstant: 30)
+		_  = stackView.anchor(top: nil, left: nil, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: GlobalConstant.margin.value, widthConstant: 66, heightConstant: 30)
+		_ = self.todayLabel.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: GlobalConstant.margin.value, bottomConstant: 0, rightConstant: 0, widthConstant: (GlobalConstant.screenWidth.value - 2 * GlobalConstant.margin.value) * 0.6, heightConstant: 30)
 	}
 	
 	
