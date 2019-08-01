@@ -27,6 +27,7 @@ class ExtendedDetailCell: UICollectionViewCell {
     var datasourceItem: (key: ExtendedInfo, value: String)! {
         didSet {
             guard let _ = self.datasourceItem else { return }
+			
             self.setupViews()
             let key = self.datasourceItem.key
             let value = self.datasourceItem.value
@@ -49,6 +50,7 @@ class ExtendedDetailCell: UICollectionViewCell {
 		self.addSubview(self.separatorLineView)
 		self.extendedInfoTextView.fillSuperview()
 		_ = self.separatorLineView.anchor(top: nil, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
+		
 		self.separatorLineView.backgroundColor = UIColor.App.transparentWhite.value
 		self.separatorLineView.isHidden = false
 	}
@@ -66,6 +68,7 @@ fileprivate extension NSMutableAttributedString {
         let descriptionAttributedString = NSMutableAttributedString(string: description,
                                                                     attributes:  descriptionAttribute)
         attributedText.append(descriptionAttributedString)
+		
         return attributedText
     }
     

@@ -22,7 +22,9 @@ internal class LoadWeatherOverviewCommand: AsyncCommand {
     
     override func executeCoreAsync(token: CancellationToken?) -> Promise<Bool> {
         guard let city = self.viewModel.currentCity.value else { return Promise(false) }
-        
+		
+		self.viewModel.result.value = nil
+		
         return self.apiService.fetchWeatherOverview(city)
             .then { [unowned self] (weatherOverview) in
                 self.viewModel.result.value = WeatherItemViewModel(weatherOverView: weatherOverview)

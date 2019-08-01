@@ -52,6 +52,7 @@ class WeatherCell: UICollectionViewCell {
     var datasourceItem: WeatherItemViewModel! {
         didSet {
             guard let _ = self.datasourceItem else { return }
+			
             self.setupViews()
         }
     }
@@ -76,6 +77,7 @@ class WeatherCell: UICollectionViewCell {
 	
 	@objc private func handleSetOffset(notification: Notification) {
 		guard let offset = notification.object as? CGFloat else { return }
+		
 		self.cellCollectionView.contentOffset = CGPoint(x: 0, y: offset)
 	}
 }
@@ -90,7 +92,9 @@ extension WeatherCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TodayWeatherCell.self), for: indexPath) as? TodayWeatherCell else { return UICollectionViewCell() }
+		
 		cell.datasourceItem = self.datasourceItem.todayDescription
+		
 		return cell
 	}
 	
@@ -99,11 +103,15 @@ extension WeatherCell: UICollectionViewDataSource {
 		switch kind {
 		case UICollectionView.elementKindSectionHeader:
 			guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(self.headerCell), for: indexPath) as? DailyWeatherCell else { return reusableView }
+			
 			header.datasourceItem = self.datasourceItem.listItemViewModelsForWeekDays
+			
 			reusableView = header
 		case UICollectionView.elementKindSectionFooter:
 			guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(self.footerCell), for: indexPath) as? ExtendedInfoCell else { return reusableView }
+			
 			footer.datasourceItem = self.datasourceItem.extendedInfo
+			
 			reusableView = footer
 		default: break
 		}
@@ -118,6 +126,7 @@ extension WeatherCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: frame.width, height: WeatherCells.todayDescription.defaultHeight)
 	}
+	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
 		let cellsCount = self.datasourceItem.listItemViewModelsForWeekDays.count
 		let height = WeatherCells.dailyCells(cellsCount).defaultHeight

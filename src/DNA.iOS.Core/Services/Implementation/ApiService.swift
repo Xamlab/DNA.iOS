@@ -35,6 +35,7 @@ internal class ApiService: IApiService {
         guard let cityId = self.cityRespository.cities.first(where: { $0.name.lowercased().contains(city.name.lowercased()) })?.id else {
             return Promise<WeatherOverview>(CoreError.notFoundedCityInRepository)
         }
+		
         enum Keys: String { case appid, id }
         
         let parameters: Parameters = [

@@ -35,12 +35,14 @@ extension WeatherController: UICollectionViewDataSource {
 			guard let topHeaderCell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(WeatherTopHeaderCell.self), for: indexPath) as? WeatherTopHeaderCell else { return reusableView }
 			
 			topHeaderCell.datasourceItem = self.weatherItemViewModel.value
+			
 			reusableView = topHeaderCell
 			
 		case WeatherHeaders.centerHeader.section:
 			guard let secondHeaderCell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(WeatherSecondHeaderCell.self), for: indexPath) as? WeatherSecondHeaderCell else { return reusableView }
 			
 			secondHeaderCell.datasourceItem = self.weatherItemViewModel.value?.listItemViewModels
+			
 			reusableView = secondHeaderCell
 			
 		default: break

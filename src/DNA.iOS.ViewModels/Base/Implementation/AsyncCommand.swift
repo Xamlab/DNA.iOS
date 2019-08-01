@@ -14,21 +14,22 @@ internal class AsyncCommand: Command, IAsyncCommand {
     public var isBusy = Observable<Bool>(false)
     public var isSuccessful = Observable<Bool>(false)
     public var failureMessage = Observable<String?>(nil)
-    
+	
+	
     public override func execute() {
-        executeAsync()
+        self.executeAsync()
     }
     
     @discardableResult
     public func executeAsync(token: CancellationToken? = nil) -> Promise<Void> {
-        if !isEnabled.value {
-            return Promise(Void())
-        }
+		guard self.isEnabled.value else { return Promise(Void()) }
 
-        isBusy.value = true
-        isSuccessful.value = false
-        failureMessage.value = nil
-        return executeCoreAsync(token: token).then { [unowned self] isSuccessful in
+        self.isBusy.value = true
+        self.isSuccessful.value = false
+        self.failureMessage.value = nil
+		
+        return self.executeCoreAsync(token: token)
+			.then { [unowned self] isSuccessful in
                 self.isSuccessful.value = isSuccessful
             }
             .always {

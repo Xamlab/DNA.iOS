@@ -29,6 +29,7 @@ class WeatherSecondHeaderCell: UICollectionViewCell {
     var datasourceItem: [ListItemViewModel]! {
         didSet{
             guard let _ = self.datasourceItem else { return }
+			
             self.setupViews()
         }
     }

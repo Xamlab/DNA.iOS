@@ -18,6 +18,7 @@ extension CLLocation {
                 guard let placemark = placemarks?.first,
                     let cityName = placemark.locality,
                     let location = placemark.location else { fulfill(nil); return }
+				
                 let city: CityOptional = City.init(name: cityName, location: location)
                 fulfill(city)
             }

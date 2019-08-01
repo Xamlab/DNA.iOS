@@ -13,8 +13,10 @@ import ReactiveKit
 
 class WeatherOverviewViewController: WeatherController {
     @IBOutlet weak var weatherCollectionView: UICollectionView!
-    private var viewModel: IWeatherOverviewViewModel!
-    
+	@IBOutlet weak var activityIndicator: BindableActivityIndicator!
+	private var viewModel: IWeatherOverviewViewModel!
+	
+	
     override func viewDidLoad() {
         self.initialSetup()
         super.viewDidLoad()
@@ -25,11 +27,13 @@ class WeatherOverviewViewController: WeatherController {
         self.collectionView = self.weatherCollectionView
     }
     
-    private func setupViewModel() {
+    private func setupViewModel() {		
         self.viewModel = ServiceLocator.instance.resolve(IWeatherOverviewViewModel.self)
         
         self.viewModel.result.bind(to: self.weatherItemViewModel).dispose(in: self.bag)
-        
+		
+		self.viewModel.loadCommand.isBusy.bind(to: self.activityIndicator.animate).dispose(in: self.bag)
+		
         self.viewModel.setupCommand.execute()
     }
 }

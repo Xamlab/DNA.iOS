@@ -30,6 +30,7 @@ class ExtendedInfoCell: UICollectionViewCell {
     var datasourceItem: [(ExtendedInfo, String)]! {
         didSet{
             guard let _ = datasourceItem  else { return }
+			
             self.setupViews()
         }
     }
@@ -53,7 +54,9 @@ extension ExtendedInfoCell: UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ExtendedDetailCell.self), for: indexPath) as? ExtendedDetailCell else { return UICollectionViewCell() }
+		
 		cell.datasourceItem = self.datasourceItem[indexPath.row]
+		
 		return cell
 	}
 }

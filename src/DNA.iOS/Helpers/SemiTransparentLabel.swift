@@ -10,7 +10,6 @@ import UIKit
 
 class SemiTransparentLabel: UILabel {
 	
-	
 	init(font: UIFont? = nil) {
 		super.init(frame: .zero)
 		self.font = font

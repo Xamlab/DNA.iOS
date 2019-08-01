@@ -10,7 +10,6 @@ import UIKit
 
 class SeparationLineView: UIView {
 	
-	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		self.setup()

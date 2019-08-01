@@ -34,7 +34,9 @@ class DailyDetailCell: UICollectionViewCell {
     var datasourceItem: ListItemViewModel! {
         didSet {
             guard let _ = self.datasourceItem  else { return }
+			
             self.setupViews()
+			
             self.dayLabel.text = self.datasourceItem.weekDay
             self.weatherIcon.image = self.datasourceItem.weatherIcon
             self.temperatureLowLabel.text = self.datasourceItem.lowTemperature

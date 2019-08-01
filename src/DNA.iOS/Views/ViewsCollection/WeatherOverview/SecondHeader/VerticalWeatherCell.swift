@@ -31,6 +31,7 @@ class VerticalWeatherCell: UICollectionViewCell {
     var datasourceItem: ListItemViewModel! {
         didSet {
             guard let _ = self.datasourceItem else { return }
+			
             self.setupViews()
             self.hourLabel.text = self.datasourceItem.hour
             self.temperatureLabel.text = self.datasourceItem.temperature

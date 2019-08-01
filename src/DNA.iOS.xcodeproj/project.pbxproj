@@ -27,6 +27,8 @@
 		BA056BB222E2626200364519 /* DNA_iOS_ViewModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA056B9C22E2626200364519 /* DNA_iOS_ViewModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF403BCD577FA1A3918CB68C /* Pods_DNA_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AD629F3996D47FC93B4D50 /* Pods_DNA_iOSTests.framework */; };
 		CFA40E5C7767CF46F354BFFA /* Pods_DNA_iOS_ViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5882EB8BDE1CD6BD8C0E5563 /* Pods_DNA_iOS_ViewModels.framework */; };
+		E226E2D022F2E0A300BFE896 /* BindableActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226E2CF22F2E0A300BFE896 /* BindableActivityIndicator.swift */; };
+		E226E2D722F2E3A900BFE896 /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E226E2D622F2E3A900BFE896 /* Loading.json */; };
 		E2FDBE5622E9A0CE0051022F /* WeatherHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDBE5522E9A0CE0051022F /* WeatherHeaders.swift */; };
 		E2FDBE5822E9A20D0051022F /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDBE5722E9A20D0051022F /* GlobalConstant.swift */; };
 		E2FDBE5B22E9A41C0051022F /* WeatherController+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDBE5A22E9A41C0051022F /* WeatherController+UICollectionViewDelegateFlowLayout.swift */; };
@@ -194,6 +196,8 @@
 		BA056BAD22E2626200364519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE08A6F8BACCA9986840A9CD /* Pods-DNA.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.iOS.debug.xcconfig"; path = "Target Support Files/Pods-DNA.iOS/Pods-DNA.iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D5844C988C44009AA74EA525 /* Pods_DNA_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E226E2CF22F2E0A300BFE896 /* BindableActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableActivityIndicator.swift; sourceTree = "<group>"; };
+		E226E2D622F2E3A900BFE896 /* Loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
 		E25836E7AD2688910A371301 /* Pods_DNA_iOS_ViewModelsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA_iOS_ViewModelsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FDBE5522E9A0CE0051022F /* WeatherHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHeaders.swift; sourceTree = "<group>"; };
 		E2FDBE5722E9A20D0051022F /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
@@ -455,6 +459,22 @@
 			path = DNA.iOS.ViewModelsTests;
 			sourceTree = "<group>";
 		};
+		E204147222F2D62700401BD6 /* WeatherOverview */ = {
+			isa = PBXGroup;
+			children = (
+				BA056B5622E25DE700364519 /* WeatherOverviewViewController.swift */,
+			);
+			path = WeatherOverview;
+			sourceTree = "<group>";
+		};
+		E226E2D522F2E39700BFE896 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				E226E2D622F2E3A900BFE896 /* Loading.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		E2FDBE5922E9A3D60051022F /* WeatherController */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,7 +611,7 @@
 		EE169AA322E75B5200554F0F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA056B5622E25DE700364519 /* WeatherOverviewViewController.swift */,
+				E204147222F2D62700401BD6 /* WeatherOverview */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -599,6 +619,7 @@
 		EE169AA422E75B6000554F0F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E226E2D522F2E39700BFE896 /* Animations */,
 				BA056B5422E25DE700364519 /* AppDelegate.swift */,
 				BA056B5B22E25DE800364519 /* Assets.xcassets */,
 				BA056B6022E25DE800364519 /* Info.plist */,
@@ -753,6 +774,7 @@
 			isa = PBXGroup;
 			children = (
 				EE8D937C22E894A800A320FC /* AutoFittingImageView.swift */,
+				E226E2CF22F2E0A300BFE896 /* BindableActivityIndicator.swift */,
 				EE8D937D22E894A800A320FC /* SeparationLineView.swift */,
 				EE8D938222E894D900A320FC /* PassiveTextView.swift */,
 				EE8D938022E894C800A320FC /* WhiteLabel.swift */,
@@ -1022,6 +1044,7 @@
 			files = (
 				BA056B5F22E25DE800364519 /* LaunchScreen.storyboard in Resources */,
 				BA056B5C22E25DE800364519 /* Assets.xcassets in Resources */,
+				E226E2D722F2E3A900BFE896 /* Loading.json in Resources */,
 				BA056B5A22E25DE700364519 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1081,6 +1104,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -1094,6 +1118,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1334,6 +1359,7 @@
 				EE8D937322E8936400A320FC /* ExtendedInfoCell.swift in Sources */,
 				EE8D938122E894C800A320FC /* WhiteLabel.swift in Sources */,
 				EE8D937222E8936400A320FC /* WeatherTopHeaderCell.swift in Sources */,
+				E226E2D022F2E0A300BFE896 /* BindableActivityIndicator.swift in Sources */,
 				EE8D937622E8936400A320FC /* TodayWeatherCell.swift in Sources */,
 				BA056B5522E25DE700364519 /* AppDelegate.swift in Sources */,
 				EE8D938522E8950100A320FC /* SemiTransparentLabel.swift in Sources */,

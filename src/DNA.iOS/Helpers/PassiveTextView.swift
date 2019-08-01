@@ -9,8 +9,7 @@
 import UIKit
 
 class PassiveTextView: UITextView {
-	
-	
+		
 	init() {
 		super.init(frame: .zero, textContainer: nil)
 		self.setupPassiveState()

@@ -36,6 +36,7 @@ class DailyWeatherCell: UICollectionViewCell {
      var datasourceItem: [ListItemViewModel]! {
         didSet{
             guard let _ = self.datasourceItem else { return }
+			
             self.setupViews()
         }
     }
@@ -48,6 +49,7 @@ class DailyWeatherCell: UICollectionViewCell {
 		self.addSubview(self.separatorLineView)
 		self.cellCollectionView.fillSuperview()
 		_ = self.separatorLineView.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
+		
 		self.separatorLineView.backgroundColor = UIColor.App.transparentWhite.value
 		self.separatorLineView.isHidden = false
 	}
@@ -63,7 +65,9 @@ extension DailyWeatherCell: UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  NSStringFromClass(DailyDetailCell.self), for: indexPath) as? DailyDetailCell else { return UICollectionViewCell() }
+		
 		cell.datasourceItem = self.datasourceItem[indexPath.row]
+		
 		return cell
 	}
 }

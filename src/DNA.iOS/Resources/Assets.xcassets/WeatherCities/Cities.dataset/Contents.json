@@ -7,7 +7,7 @@
     {
       "idiom" : "universal",
       "filename" : "city.list.json",
-      "universal-type-identifier" : "public.json"
+      "universal-type-identifier" : ""
     }
   ]
 }

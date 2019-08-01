@@ -17,7 +17,7 @@ internal class Command : NSObject, ICommand {
     }
     
     func setEnabled(value: Bool) {
-        isEnabled.value = value
+        self.isEnabled.value = value
     }
     
     public func execute() {

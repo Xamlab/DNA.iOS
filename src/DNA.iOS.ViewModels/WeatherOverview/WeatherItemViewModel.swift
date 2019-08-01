@@ -119,7 +119,7 @@ public class WeatherItemViewModel: WeatherFormatable {
     }
 }
 
-enum  ExtendedInfoUnits: String {
+fileprivate enum ExtendedInfoUnits: String {
 	case windSpeed = "km/hr"
 	case precipitation = "cm"
 	case pressure = "hPa"
