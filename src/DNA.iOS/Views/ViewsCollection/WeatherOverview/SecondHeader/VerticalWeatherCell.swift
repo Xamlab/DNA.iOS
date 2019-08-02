@@ -56,3 +56,31 @@ class VerticalWeatherCell: UICollectionViewCell {
 		_ = self.hourLabel.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 0, leftConstant: 2, bottomConstant: 0, rightConstant: 2, widthConstant: 0, heightConstant: 0)
 	}
 }
+
+
+// MARK: - ListItemViewModel + UIImage -
+
+fileprivate extension ListItemViewModel {
+	var weatherIcon: UIImage? {
+		guard let description = self.description else { return nil }
+		
+		switch self.pod {
+		case .d:
+			switch description {
+			case .brokenClouds: return #imageLiteral(resourceName: "imageRainy")
+			case .clearSky: return #imageLiteral(resourceName: "imageSunny")
+			case .fewClouds: return #imageLiteral(resourceName: "imageDayPartlyCloudy")
+			case .lightSnow: return #imageLiteral(resourceName: "imageNightCloudy")
+			case .scatteredClouds: return #imageLiteral(resourceName: "imageDayPartlyCloudy")
+			}
+		case .n:
+			switch description {
+			case .brokenClouds: return #imageLiteral(resourceName: "imageNightPartlyCloudy")
+			case .clearSky: return #imageLiteral(resourceName: "imageNightClear")
+			case .fewClouds: return #imageLiteral(resourceName: "imageNightCloudy")
+			case .lightSnow: return #imageLiteral(resourceName: "imageRainy")
+			case .scatteredClouds: return #imageLiteral(resourceName: "imageNightCloudy")
+			}
+		}
+	}
+}

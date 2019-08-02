@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DNA_iOS_Core
 
 internal class CityRepository: ICityRespository {
     private enum Keys: String { case Cities }

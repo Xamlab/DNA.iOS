@@ -66,3 +66,30 @@ class DailyDetailCell: UICollectionViewCell {
 	}
 }
 
+
+// MARK: - ListItemViewModel + UIImage -
+
+fileprivate extension ListItemViewModel {
+	var weatherIcon: UIImage? {
+		guard let description = self.description else { return nil }
+		
+		switch self.pod {
+		case .d:
+			switch description {
+			case .brokenClouds: return #imageLiteral(resourceName: "imageRainy")
+			case .clearSky: return #imageLiteral(resourceName: "imageSunny")
+			case .fewClouds: return #imageLiteral(resourceName: "imageDayPartlyCloudy")
+			case .lightSnow: return #imageLiteral(resourceName: "imageNightCloudy")
+			case .scatteredClouds: return #imageLiteral(resourceName: "imageDayPartlyCloudy")
+			}
+		case .n:
+			switch description {
+			case .brokenClouds: return #imageLiteral(resourceName: "imageNightPartlyCloudy")
+			case .clearSky: return #imageLiteral(resourceName: "imageNightClear")
+			case .fewClouds: return #imageLiteral(resourceName: "imageNightCloudy")
+			case .lightSnow: return #imageLiteral(resourceName: "imageRainy")
+			case .scatteredClouds: return #imageLiteral(resourceName: "imageNightCloudy")
+			}
+		}
+	}
+}

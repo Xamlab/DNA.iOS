@@ -6,7 +6,7 @@
 //  Copyright © 2019 Khachatur Hakobyan. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import DNA_iOS_Core
 
 protocol WeatherFormatable {
@@ -52,31 +52,10 @@ extension WeatherFormatable {
         let temp = self.getCelsius(kelvin: temp)
         return "\(temp.description)°"
     }
-    
-    func getWeatherIcon(description: Description, pod: Pod) -> UIImage {
-        switch pod {
-        case .d:
-            switch description {
-            case .brokenClouds: return #imageLiteral(resourceName: "imageRainy")
-            case .clearSky: return #imageLiteral(resourceName: "imageSunny")
-            case .fewClouds: return #imageLiteral(resourceName: "imageDayPartlyCloudy")
-            case .lightSnow: return #imageLiteral(resourceName: "imageNightCloudy")
-            case .scatteredClouds: return #imageLiteral(resourceName: "imageDayPartlyCloudy")
-            }
-        case .n:
-            switch description {
-            case .brokenClouds: return #imageLiteral(resourceName: "imageNightPartlyCloudy")
-            case .clearSky: return #imageLiteral(resourceName: "imageNightClear")
-            case .fewClouds: return #imageLiteral(resourceName: "imageNightCloudy")
-            case .lightSnow: return #imageLiteral(resourceName: "imageRainy")
-            case .scatteredClouds: return #imageLiteral(resourceName: "imageNightCloudy")
-            }
-        }
-    }
-    
-    func getTodayCurrentDescriptionResult(weatherOverView: WeatherOverview) -> Description {
+	
+    func getTodayCurrentDescriptionResult(_ weathers: [Weather]) -> Description {
         var frequencyOfDescription: [Description: Int] = [:]
-        let descriptionTypes = weatherOverView.list.first?.weather.map { $0.description } ?? []
+		let descriptionTypes = weathers.map { $0.description }
         
         for description in descriptionTypes {
             frequencyOfDescription[description] = (frequencyOfDescription[description] ?? 0) + 1

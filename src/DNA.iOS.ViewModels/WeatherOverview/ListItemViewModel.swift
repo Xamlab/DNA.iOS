@@ -7,45 +7,31 @@
 //
 
 import DNA_iOS_Core
-import UIKit
 
 public struct ListItemViewModel: WeatherFormatable {
-    private var list: List
-    
-    init(list: List) {
-        self.list = list
-    }
-    
-    public var hour: String {
-        let hour = self.getHour(dateString: self.list.dtTxt)
-        return hour
-    }
-    
-    public var weekDay: String {
-        let weekDay = self.getWeekDay(dateString: self.list.dtTxt)
-        return weekDay
-    }
-    
-    public var temperature: String {
-        let temperature = self.getTemperature(temp: self.list.main.temp)
-        return temperature
-    }
-    
-   public var lowTemperature: String {
-        let temperature = self.list.main.tempMin
-        let celsius = self.getCelsius(kelvin: temperature)
-        return "\(celsius)"
-    }
-    
-    public var highTemperature: String {
-        let temperature = self.list.main.tempMax
-        let celsius = self.getCelsius(kelvin: temperature)
-        return "\(celsius)"
-    }
-    
-    public var weatherIcon: UIImage? {
-        guard let weather = self.list.weather.first else { return nil}
-        let weatherIcon = self.getWeatherIcon(description: weather.description, pod: self.list.sys.pod)
-        return weatherIcon
-    }
+	public let hour: String
+	public let weekDay: String
+	public let temperature: String
+	public let lowTemperature: String
+	public let highTemperature: String
+	public let description: Description?
+	public let pod: Pod
+	
+	
+	init(hour: String,
+		 weekDay: String,
+		 temperature: String,
+		 lowTemperature: String,
+		 highTemperature: String,
+		 description: Description?,
+		 pod: Pod) {
+		
+		self.hour = hour
+		self.weekDay = weekDay
+		self.temperature = temperature
+		self.lowTemperature = lowTemperature
+		self.highTemperature = highTemperature
+		self.description = description
+		self.pod = pod
+	}
 }

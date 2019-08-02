@@ -10,7 +10,7 @@ import DNA_iOS_Core
 import UIKit
 import Bond
 
-internal class WeatherOverviewViewModel: IWeatherOverviewViewModel, WeatherFormatable {
+internal class WeatherOverviewViewModel: IWeatherOverviewViewModel {
     private let loctionManager: ILoctionManager
     private let apiService: IApiService
     lazy var setupCommand: ICommand = SetupWeatherOverviewCommand(self, self.loctionManager)

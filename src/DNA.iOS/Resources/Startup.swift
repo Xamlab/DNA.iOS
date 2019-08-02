@@ -14,6 +14,9 @@ public extension Container {
 	@discardableResult
 	func registerDependencies() -> Container {
 		
+		// MARK: - Respositories -
+		self.autoregister(ICityRespository.self, initializer: CityRepository.init)
+		
 		//Managers
 		self.autoregister(ILoctionManager.self, initializer: LocationManager.init)
 
