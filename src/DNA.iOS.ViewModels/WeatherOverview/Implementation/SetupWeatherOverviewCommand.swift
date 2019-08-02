@@ -20,14 +20,14 @@ internal class SetupWeatherOverviewCommand: Command {
     }
     
     override func execute() {
+		self.loctionManager.setAuthorizationStatusUpdatedHandler { (status) in
+			self.viewModel.locationAuthorizationStatus.value = status
+		}
+		
         self.loctionManager.setCurrentCityUpdatedHandler { [unowned self] (city) in
             guard self.viewModel.currentCity.value != city else { return }
             
             self.viewModel.currentCity.value = city
-        }
-        
-        self.loctionManager.setAuthorizationStatusUpdatedHandler { (status) in
-            self.viewModel.authorizationStatus.value = status
         }
         
         self.loctionManager.requestAuthorization(.always, true)

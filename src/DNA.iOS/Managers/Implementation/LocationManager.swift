@@ -7,12 +7,13 @@
 //
 
 import CoreLocation
+import DNA_iOS_Core
 
 internal class LocationManager: NSObject, ILoctionManager {
     private let clLocationManager = CLLocationManager()
     private var didAuthorizationStatus: AuthorizationStatusHandler = { _ in }
     private var didUpdatedCurrentCity: CityHandler = { _ in }
-    var clAuthorizationStatus = CLAuthorizationStatus.notDetermined
+    var locationAuthorizationStatus = LocationAuthorizationStatus.notDetermined
     var currentCity: City? = nil
     
     
@@ -52,8 +53,10 @@ internal class LocationManager: NSObject, ILoctionManager {
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        self.clAuthorizationStatus = status
-        self.didAuthorizationStatus(status)
+		guard let locationAuthorizationStatus = LocationAuthorizationStatus(rawValue: status.rawValue) else { return }
+		
+        self.locationAuthorizationStatus = locationAuthorizationStatus
+        self.didAuthorizationStatus(locationAuthorizationStatus)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

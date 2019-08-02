@@ -8,6 +8,7 @@
 
 import CoreLocation
 import Promises
+import DNA_iOS_Core
 
 typealias CityOptional = City?
 
@@ -19,7 +20,9 @@ extension CLLocation {
                     let cityName = placemark.locality,
                     let location = placemark.location else { fulfill(nil); return }
 				
-                let city: CityOptional = City.init(name: cityName, location: location)
+                let city: CityOptional = City(name: cityName,
+											  latitude: location.coordinate.latitude,
+											  longitude: location.coordinate.longitude)
                 fulfill(city)
             }
         }

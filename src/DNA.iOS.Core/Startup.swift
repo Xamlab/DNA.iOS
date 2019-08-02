@@ -18,9 +18,6 @@ public extension Container {
         
         // MARK: - Providers -
         self.autoregister(IConfigurationProvider.self, initializer: ConfigurationProvider.init)
-
-        // MARK: - Managers -
-        self.autoregister(ILoctionManager.self, initializer: LocationManager.init)
         
         // MARK: - Services -
         self.autoregister(IApiService.self, initializer: ApiService.init)

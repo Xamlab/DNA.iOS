@@ -8,12 +8,11 @@
 
 import Bond
 import DNA_iOS_Core
-import CoreLocation
 
 public protocol IWeatherOverviewViewModel {
     var setupCommand: ICommand { get }
     var loadCommand: IAsyncCommand { get }
     var currentCity: Observable<City?> { get }
-    var authorizationStatus: Observable<CLAuthorizationStatus> { get }
+    var locationAuthorizationStatus: Observable<LocationAuthorizationStatus> { get }
     var result: Observable<WeatherItemViewModel?> { get }
 }
