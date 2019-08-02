@@ -45,7 +45,8 @@ class WeatherTopHeaderCell: UICollectionViewCell {
         didSet {
             guard let weatherOverview = self.datasourceItem else { return }
             self.setupViews()
-            self.cityNameTextView.attributedText = weatherOverview.cityAndDescriptionAttributedString
+			
+			self.cityNameTextView.attributedText = self.getAttributedSring(weatherOverview.cityAndDescriptionPair)
             self.temperatureLabel.text = weatherOverview.temperature
             self.todayLabel.text = weatherOverview.weekDay
             self.temperatureLowLabel.text = weatherOverview.lowTemperature
@@ -102,5 +103,20 @@ class WeatherTopHeaderCell: UICollectionViewCell {
 	private func calculateAlpha() -> CGFloat {
 		let transparentY = self.temperatureLabel.frame.height + self.temperatureLabel.frame.origin.y
 		return max((self.frame.height - transparentY) / (WeatherHeaders.topHeader.defaultHeight - transparentY), 0)
+	}
+}
+
+
+fileprivate extension WeatherTopHeaderCell {
+	func getAttributedSring(_ cityAndDescriptionPair: (city: String, description: String)) -> NSAttributedString? {
+		let attributedString = NSMutableAttributedString.setupWithText(cityAndDescriptionPair.city,
+																	   description: "\n" + cityAndDescriptionPair.description,
+																	   textFont: UIFont.systemFont(ofSize: 34),
+																	   descriptionFont: UIFont.systemFont(ofSize: 16),
+																	   textColor: UIColor.white,
+																	   descriptionColor: UIColor.white)
+		attributedString?.centerAlignWithSpacing(1.0)
+		
+		return attributedString
 	}
 }

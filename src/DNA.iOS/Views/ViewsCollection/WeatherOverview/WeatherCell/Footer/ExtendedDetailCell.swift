@@ -55,32 +55,3 @@ class ExtendedDetailCell: UICollectionViewCell {
 		self.separatorLineView.isHidden = false
 	}
 }
-
-
-fileprivate extension NSMutableAttributedString {
-    class func setupWithText(_ text: String, description: String, textFont: UIFont, descriptionFont: UIFont, textColor: UIColor, descriptionColor: UIColor) -> NSMutableAttributedString?{
-        
-        let textAttribute = [NSAttributedString.Key.font: textFont, NSAttributedString.Key.foregroundColor: textColor]
-        let descriptionAttribute = [NSAttributedString.Key.font: descriptionFont, NSAttributedString.Key.foregroundColor: descriptionColor]
-        
-        let attributedText = NSMutableAttributedString(string: text,
-                                                       attributes: textAttribute)
-        let descriptionAttributedString = NSMutableAttributedString(string: description,
-                                                                    attributes:  descriptionAttribute)
-        attributedText.append(descriptionAttributedString)
-		
-        return attributedText
-    }
-    
-    func setLineSpacing(_ lineSpacing: CGFloat) {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = lineSpacing
-        self.setParagraphStyle(paragraphStyle: paragraphStyle)
-    }
-    
-    func setParagraphStyle(paragraphStyle: NSParagraphStyle) {
-        let range = NSMakeRange(0, self.string.count)
-        self.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
-    }
-}
-

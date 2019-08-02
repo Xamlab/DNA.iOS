@@ -16,13 +16,11 @@ public class WeatherItemViewModel: WeatherFormatable {
         self.weatherOverView = weatherOverView
     }
     
-   public var cityAndDescriptionAttributedString: NSMutableAttributedString? {
+	public var cityAndDescriptionPair: (city: String, description: String) {
         let cityName = self.weatherOverView.city.name
         let weatherDescription = self.weatherOverView.list.first?.weather.first?.description.rawValue.capitalized ?? "--"
-        
-        let attributedString = NSMutableAttributedString.setupWithText(cityName, description: "\n" + weatherDescription, textFont: UIFont.systemFont(ofSize: 34), descriptionFont: UIFont.systemFont(ofSize: 16), textColor: UIColor.white, descriptionColor: UIColor.white)
-        attributedString?.centerAlignWithSpacing(1.0)
-        return attributedString
+		
+		return (cityName, weatherDescription)
     }
     
     public var lowTemperature: String {
