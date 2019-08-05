@@ -1,5 +1,5 @@
 //
-//  DailyWeatherCell.swift
+//  DailyWeatherView.swift
 //  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
@@ -9,7 +9,7 @@
 import UIKit
 import DNA_iOS_ViewModels
 
-class DailyWeatherCell: UICollectionViewCell {
+class DailyWeatherView: UICollectionViewCell {
 	
 	private lazy var cellCollectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
@@ -52,31 +52,5 @@ class DailyWeatherCell: UICollectionViewCell {
 		
 		self.separatorLineView.backgroundColor = UIColor.App.transparentWhite.value
 		self.separatorLineView.isHidden = false
-	}
-}
-
-
-// MARK: - UICollectionViewDataSource -
-
-extension DailyWeatherCell: UICollectionViewDataSource {
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return self.datasourceItem.count
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  NSStringFromClass(DailyDetailCell.self), for: indexPath) as? DailyDetailCell else { return UICollectionViewCell() }
-		
-		cell.datasourceItem = self.datasourceItem[indexPath.row]
-		
-		return cell
-	}
-}
-
-
-// MARK: - UICollectionViewDelegateFlowLayout -
-
-extension DailyWeatherCell: UICollectionViewDelegateFlowLayout {
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: self.frame.width - 2 * GlobalConstant.margin.value, height: 30)
 	}
 }

@@ -8,7 +8,6 @@
 
 import UIKit
 import DNA_iOS_ViewModels
-import DNA_iOS_Core
 
 class ExtendedDetailCell: UICollectionViewCell {
 	

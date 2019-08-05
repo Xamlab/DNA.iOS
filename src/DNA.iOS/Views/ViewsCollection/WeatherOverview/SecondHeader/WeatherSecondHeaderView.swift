@@ -1,5 +1,5 @@
 //
-//  WeatherSecondHeaderCellCollectionViewCell.swift
+//  WeatherSecondHeaderView.swift
 //  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
@@ -9,7 +9,7 @@
 import UIKit
 import DNA_iOS_ViewModels
 
-class WeatherSecondHeaderCell: UICollectionViewCell {
+class WeatherSecondHeaderView: UICollectionViewCell {
 	private let topSeparator = SeparationLineView()
 	private let bottomSeparator = SeparationLineView()
 	

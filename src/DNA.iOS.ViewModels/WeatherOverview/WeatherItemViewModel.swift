@@ -7,11 +7,8 @@
 //
 
 import DNA_iOS_Core
-import UIKit
 
 public class WeatherItemViewModel: WeatherFormatable {
-   // private var weatherOverView: WeatherOverview
-	
 	public var cityAndDescriptionPair: (city: String, description: String)
 	public var lowTemperature: String
 	public var highTemperature: String
@@ -34,7 +31,6 @@ public class WeatherItemViewModel: WeatherFormatable {
 		 listItemViewModelsForWeekDays: [ListItemViewModel],
 		 todayDescription: String,
 		 extendedInfo: [(ExtendedInfo, String)]) {
-		
 		self.cityAndDescriptionPair = cityAndDescriptionPair
 		self.lowTemperature = lowTemperature
 		self.highTemperature = highTemperature

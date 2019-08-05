@@ -7,15 +7,15 @@
 //
 
 public class List: Codable {
+	public let dtTxt: String
     public let dt: Int
     public let main: MainClass
-    public let weather: [Weather]
     public let clouds: Clouds
     public let wind: Wind
     public let snow: Snow
     public let sys: Sys
-    public let dtTxt: String
-    
+	public let weather: [Weather]
+	
     enum CodingKeys: String, CodingKey {
         case dt, main, weather, clouds, wind, snow, sys
         case dtTxt = "dt_txt"

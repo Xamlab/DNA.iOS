@@ -16,7 +16,10 @@ internal class CityRepository: ICityRespository {
     
     init() {
         guard let asset = NSDataAsset(name: Keys.Cities.rawValue),
-            let cities = try? JSONDecoder().decode([WeatherCity].self, from: asset.data) else { self.cities = []; return }
+            let cities = try? JSONDecoder().decode([WeatherCity].self, from: asset.data) else {
+				self.cities = []
+				return
+		}
         
         self.cities = cities
     }

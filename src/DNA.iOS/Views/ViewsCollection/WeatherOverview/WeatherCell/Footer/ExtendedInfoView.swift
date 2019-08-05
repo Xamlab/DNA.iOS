@@ -1,5 +1,5 @@
 //
-//  ExtendedInfoCell.swift
+//  ExtendedInfoView.swift
 //  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
@@ -9,7 +9,7 @@
 import UIKit
 import DNA_iOS_ViewModels
 
-class ExtendedInfoCell: UICollectionViewCell {
+class ExtendedInfoView: UICollectionViewCell {
 	
 	private lazy var cellCollectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
@@ -41,31 +41,5 @@ class ExtendedInfoCell: UICollectionViewCell {
 	func setupViews() {
 		self.addSubview(self.cellCollectionView)
 		self.cellCollectionView.fillSuperview()
-	}
-}
-
-
-// MARK: - UICollectionViewDelegateFlowLayout -
-
-extension ExtendedInfoCell: UICollectionViewDataSource {
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return self.datasourceItem.count
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ExtendedDetailCell.self), for: indexPath) as? ExtendedDetailCell else { return UICollectionViewCell() }
-		
-		cell.datasourceItem = self.datasourceItem[indexPath.row]
-		
-		return cell
-	}
-}
-
-
-// MARK: - UICollectionViewDelegateFlowLayout -
-
-extension ExtendedInfoCell: UICollectionViewDelegateFlowLayout {
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: (frame.width - 2 * GlobalConstant.margin.value) / 2, height: WeatherCells.extendedInfo.defaultHeight)
 	}
 }

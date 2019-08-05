@@ -69,9 +69,7 @@ internal class ApiService: IApiService {
                 .responseData{ response in
                     switch response.result {
                     case .success:
-                        do {
-                            debugPrint(try! JSONSerialization.jsonObject(with: response.value!, options: []))
-                            
+                        do {                            
                             let responseT = try JSONDecoder().decode(T.self, from: response.value!)
                             fulfill(responseT)
                         } catch {

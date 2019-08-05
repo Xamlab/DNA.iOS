@@ -1,5 +1,5 @@
 //
-//  WeatherSecondHeaderCell+UICollectionViewDelegateFlowLayout.swift
+//  WeatherSecondHeaderView+UICollectionViewDelegateFlowLayout.swift
 //  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 7/25/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension WeatherSecondHeaderCell: UICollectionViewDelegateFlowLayout {
+extension WeatherSecondHeaderView: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: 42, height: self.frame.height - 20)
 	}

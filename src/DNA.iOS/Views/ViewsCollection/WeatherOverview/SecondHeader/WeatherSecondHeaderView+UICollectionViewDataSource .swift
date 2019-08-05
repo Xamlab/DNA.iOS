@@ -1,5 +1,5 @@
 //
-//  WeatherSecondHeaderCell+UICollectionViewDataSource .swift
+//  WeatherSecondHeaderView+UICollectionViewDataSource .swift
 //  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 7/25/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension WeatherSecondHeaderCell: UICollectionViewDataSource {
+extension WeatherSecondHeaderView: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return self.datasourceItem.count
 	}

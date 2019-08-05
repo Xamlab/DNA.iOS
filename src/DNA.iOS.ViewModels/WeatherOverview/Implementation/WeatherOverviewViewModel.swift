@@ -6,9 +6,8 @@
 //  Copyright © 2019 Xamlab. All rights reserved.
 //
 
-import DNA_iOS_Core
-import UIKit
 import Bond
+import DNA_iOS_Core
 
 internal class WeatherOverviewViewModel: IWeatherOverviewViewModel {
     private let loctionManager: ILoctionManager

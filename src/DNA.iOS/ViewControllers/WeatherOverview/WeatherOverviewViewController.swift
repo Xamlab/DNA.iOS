@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import DNA_iOS_Core
 import DNA_iOS_ViewModels
-import ReactiveKit
+import DNA_iOS_Core
 
 class WeatherOverviewViewController: WeatherController {
     @IBOutlet weak var weatherCollectionView: UICollectionView!

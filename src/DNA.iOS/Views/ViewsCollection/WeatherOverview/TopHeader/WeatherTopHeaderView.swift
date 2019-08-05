@@ -1,5 +1,5 @@
 //
-//  WeatherTopHeaderCell.swift
+//  WeatherTopHeaderView.swift
 //  DNA.iOS
 //
 //  Created by Khachatur Hakobyan on 4/26/19.
@@ -9,7 +9,7 @@
 import UIKit
 import DNA_iOS_ViewModels
 
-class WeatherTopHeaderCell: UICollectionViewCell {
+class WeatherTopHeaderView: UICollectionViewCell {
 	
 	private let cityNameTextView: PassiveTextView = {
 		let textView = PassiveTextView()
@@ -107,7 +107,9 @@ class WeatherTopHeaderCell: UICollectionViewCell {
 }
 
 
-fileprivate extension WeatherTopHeaderCell {
+// MARK: - Get Attributed Sring -
+
+fileprivate extension WeatherTopHeaderView {
 	func getAttributedSring(_ cityAndDescriptionPair: (city: String, description: String)) -> NSAttributedString? {
 		let attributedString = NSMutableAttributedString.setupWithText(cityAndDescriptionPair.city,
 																	   description: "\n" + cityAndDescriptionPair.description,

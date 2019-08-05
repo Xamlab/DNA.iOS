@@ -11,7 +11,7 @@ import DNA_iOS_ViewModels
 import Bond
 
 class WeatherController: UIViewController {
-	let headerCells: [UICollectionViewCell.Type] = [WeatherTopHeaderCell.self, WeatherSecondHeaderCell.self]
+	let headerCells: [UICollectionViewCell.Type] = [WeatherTopHeaderView.self, WeatherSecondHeaderView.self]
 	let cells: [UICollectionViewCell.Type] = [WeatherCell.self]
 	var weatherItemViewModel: Observable<WeatherItemViewModel?> = Observable<WeatherItemViewModel?>(nil)
 	var collectionView: UICollectionView! = nil

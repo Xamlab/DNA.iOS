@@ -19,6 +19,7 @@ class WeatherCollectionViewFlowLayout: UICollectionViewFlowLayout {
 	
 	private func setup() {
 		self.attributes = [] // Start with a fresh array of attributes
+		
 		guard let collectionView = self.collectionView else { return }
 		
 		// Add all item in sections into attributes

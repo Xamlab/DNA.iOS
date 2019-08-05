@@ -20,12 +20,3 @@ public class City {
 		self.longitude = longitude
 	}
 }
-
-
-// MARK: - Equatable -
-
-extension City: Equatable {
-    public static func == (lhs: City, rhs: City) -> Bool {
-        return lhs.name == rhs.name
-    }
-}

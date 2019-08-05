@@ -25,7 +25,6 @@ public struct ListItemViewModel: WeatherFormatable {
 		 highTemperature: String,
 		 description: Description?,
 		 pod: Pod) {
-		
 		self.hour = hour
 		self.weekDay = weekDay
 		self.temperature = temperature
