@@ -5,6 +5,7 @@ PODS:
     - ReactiveKit (~> 3.10)
   - Cuckoo (0.13.0)
   - Differ (1.4.3)
+  - lottie-ios (3.0.7)
   - Nimble (8.0.2)
   - OHHTTPStubs/Core (8.0.0)
   - OHHTTPStubs/Default (8.0.0):
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.8.2)
   - Bond (~> 7.4.1)
   - Cuckoo (~> 0.13.0)
+  - lottie-ios (~> 3.0.3)
   - Nimble (~> 8.0.1)
   - OHHTTPStubs/Swift (~> 8.0.0)
   - PromisesSwift (~> 1.2.8)
@@ -43,6 +45,7 @@ SPEC REPOS:
     - Bond
     - Cuckoo
     - Differ
+    - lottie-ios
     - Nimble
     - OHHTTPStubs
     - PromisesObjC
@@ -56,6 +59,7 @@ SPEC CHECKSUMS:
   Bond: 3fd42e5786594704e6499069e9c31f35c7553a71
   Cuckoo: 3112ee8b01d84e21bde500a45f9992ac81d80006
   Differ: 6c7477d6187e8c36d02ec342a3c321061b85a0ea
+  lottie-ios: c38c3178ae8c4a8f200661aa5f80b9f1ca7f56b3
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
@@ -64,6 +68,6 @@ SPEC CHECKSUMS:
   Swinject: b624462f47b635a64f89a60a247baa5fccec14e1
   SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
 
-PODFILE CHECKSUM: 82c2d2747ee5bc25e08f015d6a06d6948d73b634
+PODFILE CHECKSUM: ecef84987669b2f225423d33a00cebdc99f443ef
 
 COCOAPODS: 1.6.1

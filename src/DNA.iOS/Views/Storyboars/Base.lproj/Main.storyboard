@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CCn-5P-r6f">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather Overview View Controller-->
+        <scene sceneID="8HT-JF-d6m">
+            <objects>
+                <viewController id="OLX-44-TNw" customClass="WeatherOverviewViewController" customModule="DNA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cEJ-m4-TMG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AvC-G7-vYR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-67-UcF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xxP-we-OL8">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmd-Jd-juM" customClass="BindableActivityIndicator" customModule="DNA_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="167" y="364" width="80" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="obF-AC-weL"/>
+                                            <constraint firstAttribute="height" constant="80" id="qE5-pv-XjV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="Loading"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="loop" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Qmd-Jd-juM" firstAttribute="centerX" secondItem="AvC-G7-vYR" secondAttribute="centerX" id="CIc-jX-chI"/>
+                                    <constraint firstItem="PrL-67-UcF" firstAttribute="top" secondItem="AvC-G7-vYR" secondAttribute="top" id="GEo-pS-Gub"/>
+                                    <constraint firstItem="PrL-67-UcF" firstAttribute="leading" secondItem="AvC-G7-vYR" secondAttribute="leading" id="fq7-BW-VfY"/>
+                                    <constraint firstAttribute="trailing" secondItem="PrL-67-UcF" secondAttribute="trailing" id="hvn-Tr-CVm"/>
+                                    <constraint firstItem="Qmd-Jd-juM" firstAttribute="centerY" secondItem="AvC-G7-vYR" secondAttribute="centerY" id="kaV-GJ-7kp"/>
+                                    <constraint firstAttribute="bottom" secondItem="PrL-67-UcF" secondAttribute="bottom" id="rnW-Oa-mdb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AvC-G7-vYR" firstAttribute="leading" secondItem="vDB-e0-OB4" secondAttribute="leading" id="1vq-c1-XTw"/>
+                            <constraint firstAttribute="bottom" secondItem="AvC-G7-vYR" secondAttribute="bottom" id="I0w-Vr-z5s"/>
+                            <constraint firstItem="AvC-G7-vYR" firstAttribute="top" secondItem="vDB-e0-OB4" secondAttribute="top" id="XeW-RN-4NX"/>
+                            <constraint firstItem="vDB-e0-OB4" firstAttribute="trailing" secondItem="AvC-G7-vYR" secondAttribute="trailing" id="ynl-db-GPt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vDB-e0-OB4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NYN-JX-FDa"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Qmd-Jd-juM" id="fWW-OE-SLn"/>
+                        <outlet property="weatherCollectionView" destination="PrL-67-UcF" id="51z-7q-4ta"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GG-Ge-Ihu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="-345"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7sM-0J-MIp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CCn-5P-r6f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="008-Kp-6Wu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.48627450979999998" green="0.76613432169999995" blue="0.90198516849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OLX-44-TNw" kind="relationship" relationship="rootViewController" id="vJd-Nn-ABG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujT-jW-rOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="-345"/>
+        </scene>
+    </scenes>
+</document>
